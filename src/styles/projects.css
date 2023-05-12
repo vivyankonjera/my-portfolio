@@ -1,0 +1,70 @@
+/* --- PROJECTS SECTION --- */
+
+#projects{
+    position: relative;
+    bottom: 20px;
+}
+.projectWrapper{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.wrapper2{
+    grid-template-columns: 3fr 1fr;
+}
+
+#projectsPrompt{
+    margin-top: 42px;
+    margin-bottom: 150px;
+    color: black;
+}
+
+
+.deskView{
+    border-radius: 10px ;
+    width: 100%;
+    -webkit-box-shadow: 10px 10px 27px -8px rgba(0,0,0,0.16); 
+    box-shadow: 10px 10px 27px -8px rgba(0,0,0,0.16);
+    transition: all .3s ease-in-out, box-shadow .3s ease-in-out;
+    position: relative;
+    
+}
+
+
+.mobView {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 10px 10px 27px -8px rgba(0,0,0,0.16);
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+    z-index: 10;
+    transition: all .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+.deskView:hover, .mobView:hover{
+    transform: scale(1.03);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1450px) {
+
+    .projectWrapper{
+        grid-template-columns: 1fr;
+        margin-bottom: 50px;
+    }
+
+    .mobView{
+        display: none;
+    }
+    
+}
+

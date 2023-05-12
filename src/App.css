@@ -1,0 +1,148 @@
+@import './styles/intro.css';
+@import './styles/experience.css';
+@import './styles/projects.css';
+@import 'styles/contact.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --color-bg: #fafafa;
+  --color-bg-alt: #e9e9e9;
+  --color-primary: #01091e;
+  --color-secondary: #bb167c;
+  
+
+  scroll-behavior: smooth;
+  
+}
+
+/* ::-webkit-scrollbar{
+  display: none;
+}
+ */
+
+body{
+  /* background: var(--color-bg); */
+  background: rgb(222,222,222);
+  background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(255,255,255,1) 40%, rgba(221,221,221,1) 100%);
+  background-image: url('images/background.jpg'); 
+}
+
+nav{
+  position: fixed;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 0;
+  
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 11px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  backdrop-filter: blur(15px);
+  -webkit-box-shadow: 10px 10px 27px -8px rgba(0,0,0,0.16); 
+  box-shadow: 10px 10px 27px -8px rgba(0,0,0,0.16);
+ 
+}
+
+nav a{
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  padding: 0.4rem 1.2rem;
+  border-radius: 7px;
+  background-color: none;
+  transition: all .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:hover{
+  background-color: var(--color-secondary);
+  color: white;
+ 
+}
+
+nav a.active{
+  background: rgba(0, 0, 0, 0.5); 
+  background: var(--color-primary); 
+  color: var(--color-bg);
+
+}
+
+button{
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0 10px;
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#scrollTopBtn{
+    color: var(--color-secondary);
+    padding: 0;
+    margin: 0;
+    font-size: 44px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    transform: translateX(-50%);
+    z-index: 9; 
+    transition: all .3s ease-in-out, box-shadow .1s ease-in-out;
+}
+
+#scrollTopBtn:hover{
+  font-size: 48px;
+}
+
+.sectionContainer{
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.heading{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  letter-spacing: -1px;
+  
+}
+
+.keyword{
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+@media screen and (max-width: 970px ) {
+  
+  .sectionContainer{
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 458px) {
+
+  .heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 26px;
+  }
+}
+
+
