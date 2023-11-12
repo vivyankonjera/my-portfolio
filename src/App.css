@@ -171,6 +171,11 @@ button,
         text-decoration: none;
         font-family: impact;
     }
+
+    #scrollTopBtn {
+        right: -7px;
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: 458px) {

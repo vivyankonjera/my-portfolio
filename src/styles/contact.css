@@ -1,6 +1,4 @@
-
-
-#contact{
+#contact {
     width: 100%;
     height: 250px;
     margin-top: 64px;
@@ -8,19 +6,25 @@
     background-color: var(--color-primary);
     background-image: url(../images/IR35.jpeg);
     text-align: center;
-    color: white; 
+    color: white;
 }
 
-#contactFollowUp{
+#contactFollowUp {
     margin: 32px 0;
     font-weight: 100;
 }
 
-.contactIcon{
+.contactIcon {
     font-size: 44px;
 }
 
-.contactIcon:hover{
+.contactIcon:hover {
     color: white;
 }
 
+@media screen and (max-width: 970px) {
+    #contactFollowUp {
+        font-size: 1rem;
+        margin: 35px 22px;
+    }
+}
