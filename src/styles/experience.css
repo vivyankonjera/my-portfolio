@@ -1,41 +1,40 @@
 /* --- EXPERIENCE SECTION --- */
 
-
-.expSection{
+.expSection {
     background-color: var(--color-primary);
-    background-image: url('../images/IR35 copy.jpg');
+    background-image: url("../images/IR35 copy.jpg");
     background-size: contain;
-    border-radius: 10px;  
+    border-radius: 10px;
     padding: 0 0 60px;
     margin-top: 92px;
     position: relative;
     overflow: hidden;
     bottom: 7px;
-  }
+}
 
-  #headingContainer{
+#headingContainer {
     position: relative;
     padding: 44px 0 0;
-    width: 100%; 
-  }
-  
-  #experiencePrompt{
+    width: 100%;
+}
+
+#experiencePrompt {
     color: white;
     margin-bottom: 42px;
-  }
+}
 
-  #timeline{
+#timeline {
     position: absolute;
     height: calc(100% - 240px);
     width: 4px;
     background-color: white;
-    top: 170px;
+    top: 155px;
     left: 50%;
     z-index: 1;
     transform: translateX(-50%);
-  }
-  
-  #timelineEnd{
+}
+
+#timelineEnd {
     color: white;
     padding: 0;
     margin: 0;
@@ -46,50 +45,51 @@
     bottom: -40px;
     transform: translateX(-50%);
     z-index: 9;
-    transition: all .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
+    transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-  #timelineEnd:hover{
+#timelineEnd:hover {
     font-size: 40px;
-  }
-  
-  .timelineRow{
+}
+
+.timelineRow {
     display: flex;
     font-size: 18px;
     font-weight: 200;
-  }
-  
-  .timelineRow section{
+}
+
+.timelineRow section {
     background-color: #ffffff;
     border-radius: 10px;
     width: calc(50% - 80px);
     padding: 20px;
     position: relative;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 4px 10px 15px 0px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, 4px 10px 15px 0px rgba(0,0,0,0);
-  }
-  
-  .timelineRow section::before{
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+        4px 10px 15px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 4px 10px 15px 0px rgba(0, 0, 0, 0);
+}
+
+.timelineRow section::before {
     position: absolute;
     content: "";
-    height: 15px ;
+    height: 15px;
     width: 15px;
     background: white;
     top: 28px;
     transform: rotate(45deg);
-  }
-  
-  .timelineRow section .timelineMark{
+}
+
+.timelineRow section .timelineMark {
     width: 16px;
     height: 16px;
     border-radius: 10%;
     background-color: white;
     position: absolute;
-    top: 28px; 
+    top: 28px;
     z-index: 5;
-  }
-  
-  .timelineRow section .timelineMark .centerMark{
+}
+
+.timelineRow section .timelineMark .centerMark {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -98,80 +98,79 @@
     width: 8px;
     height: 8px;
     background-color: var(--color-secondary);
-  }
-  
-  
-  .rowLeft{
+}
+
+.rowLeft {
     justify-content: flex-start;
     margin-left: 16px;
-  }
-  
-  .rowRight{
+}
+
+.rowRight {
     justify-content: flex-end;
     margin-right: 16px;
-  }
-  
-  .rowLeft section::before{
+}
+
+.rowLeft section::before {
     right: -7px;
-  }
-  
-  .rowRight section::before{
+}
+
+.rowRight section::before {
     left: -7px;
-  }
-  
-  .rowLeft .timelineMark{
+}
+
+.rowLeft .timelineMark {
     right: -40px;
-  }
-  
-  .rowRight .timelineMark{
+}
+
+.rowRight .timelineMark {
     left: -40px;
-  }
-  
-  
-  .expBottom{
+}
+
+.expBottom {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-  }
-  
-  .expDes{
+}
+
+.expDes {
     margin: 16px 0;
-  }
-  
-  .timelineTitle{
+}
+
+.expDate {
+    font-size: 0.9rem;
+}
+
+.timelineTitle {
     font-size: 16px;
     font-weight: bold;
-  }
+}
 
-  .readMoreBtn{
+.readMoreBtn {
     font-size: 27px;
     padding: 0;
     color: var(--color-primary);
-  }
+}
 
+/* --- MEDIA QUERIES --- */
 
-  /* --- MEDIA QUERIES --- */
-
-   @media screen and (max-width: 970px ) {
-
-    #timeline{
+@media screen and (max-width: 970px) {
+    #timeline {
         left: 28px;
     }
 
-    .timelineRow{
+    .timelineRow {
         margin: 0 0 22px 60px;
     }
 
-    .timelineRow section{
+    .timelineRow section {
         width: 100%;
     }
 
-    .rowLeft section::before{
+    .rowLeft section::before {
         left: -7px;
-      }
+    }
 
-      .rowLeft .timelineMark{
+    .rowLeft .timelineMark {
         left: -40px;
-      }
-
-  } 
+    }
+}
