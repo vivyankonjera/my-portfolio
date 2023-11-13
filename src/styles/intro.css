@@ -115,6 +115,9 @@
     line-height: 67px;
 }
 
+#aboutIcons .icon {
+    margin: 0;
+}
 .aboutBtn {
     box-shadow: inset 0 0 0 0 var(--color-secondary);
     color: white;
