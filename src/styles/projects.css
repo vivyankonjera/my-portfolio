@@ -85,6 +85,10 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1300px) {
+    #projects {
+        bottom: 0;
+    }
+
     .projectWrapper {
         flex-direction: column;
         width: 90%;
