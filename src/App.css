@@ -167,7 +167,7 @@ button,
 
     nav a {
         align-self: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         font-family: impact;
     }
@@ -183,6 +183,6 @@ button,
         text-align: center;
         text-transform: uppercase;
         font-weight: normal;
-        font-size: 24px;
+        font-size: 18px;
     }
 }

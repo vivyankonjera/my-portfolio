@@ -25,6 +25,10 @@
 @media screen and (max-width: 970px) {
     #contactFollowUp {
         font-size: 1rem;
-        margin: 35px 22px;
+        margin: 30px 22px;
+    }
+
+    #contact .contactIcon {
+        font-size: 2rem;
     }
 }
