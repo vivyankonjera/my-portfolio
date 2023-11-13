@@ -66,8 +66,8 @@ const Projects = () => {
                             A wordpress website built for a client's business
                             needs, Jabz abs is a custom wordpress theme built
                             utilising PHP, JS, HTML and CSS. The site's data is
-                            retireved from an SQL database similar to all other
-                            wp themes
+                            retireved from an SQL database similar to other wp
+                            themes
                         </p>
                         <div className='techStack'>
                             <i className='icon'>
@@ -97,7 +97,7 @@ const Projects = () => {
                             module's assessment. It's a full-stack application
                             utilising the MVC architecture. The front-end is
                             comprised of blade templates supported by a Larevel
-                            backened.{" "}
+                            backend.
                         </p>
                         <div className='techStack'>
                             <i className='icon'>
