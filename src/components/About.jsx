@@ -53,7 +53,7 @@ const About = () => {
                         solving has driven my desire for creating immersive and
                         enagaging digital experiences. I've found myself on a
                         perpertual journey of continuous growth and improvement
-                        witin web developement, I aspire to stay at the
+                        within web developement, as I aspire to stay at the
                         forefront of this dynamic field. Beginning my journey
                         studying Computing at University, to working as an email
                         developer to developing my own personal projects, I've
