@@ -170,6 +170,7 @@ button,
         font-size: 1rem;
         text-decoration: none;
         font-family: impact;
+        text-transform: uppercase;
     }
 
     #scrollTopBtn {
