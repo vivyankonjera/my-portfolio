@@ -167,9 +167,9 @@ button,
 
     nav a {
         align-self: center;
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-decoration: none;
-        font-family: impact;
+        font-family: monospace;
         text-transform: uppercase;
     }
 
