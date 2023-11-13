@@ -185,4 +185,8 @@ button,
         font-weight: normal;
         font-size: 18px;
     }
+
+    #scrollTopBtn {
+        display: none;
+    }
 }

@@ -180,6 +180,12 @@
     #aboutText {
         font-size: 1rem;
     }
+
+    #aboutIcons {
+        margin: 0 auto;
+        width: 80%;
+        line-height: 60px;
+    }
 }
 
 @media screen and (max-width: 458px) {
