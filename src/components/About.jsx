@@ -4,9 +4,8 @@ import {
     SiCss3,
     SiHtml5,
     SiReact,
-    SiAdobephotoshop,
-    SiAdobexd,
-    SiLinkedin,
+    SiMysql,
+    SiPhp,
     SiGmail,
     SiGithub,
 } from "react-icons/si";
@@ -75,10 +74,10 @@ const About = () => {
                             <SiCss3 />
                         </i>
                         <i className='icon'>
-                            <SiAdobephotoshop />
+                            <SiPhp />
                         </i>
                         <i className='icon'>
-                            <SiAdobexd />
+                            <SiMysql />
                         </i>
                     </div>
                     <div id='aboutBtns'>
