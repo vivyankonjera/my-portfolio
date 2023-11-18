@@ -24,7 +24,7 @@ const About = () => {
                                 <SiLinkedin />
                             </i> */}
                             <a
-                                href='https://github.com/vivyankonjera'
+                                href='https://github.com/vivyankonjera?tab=repositories'
                                 target='_blank'
                             >
                                 <i className='bannerIcon'>

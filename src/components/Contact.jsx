@@ -21,7 +21,10 @@ const Contact = () => {
                         </i>
                     </a>
 
-                    <a href='https://github.com/vivyankonjera' target='_blank'>
+                    <a
+                        href='https://github.com/vivyankonjera?tab=repositories'
+                        target='_blank'
+                    >
                         <i className='bannerIcon contactIcon'>
                             <SiGithub />
                         </i>
