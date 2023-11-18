@@ -77,7 +77,13 @@ const Projects = () => {
                                 <SiMysql />
                             </i>
                         </div>
-                        <button className='projectBtn'>View project</button>
+                        <a
+                            className='projectBtn'
+                            href='https://github.com/vivyankonjera/jabzabs'
+                            target='_blank'
+                        >
+                            View project
+                        </a>
                     </div>
                 </div>
 
@@ -111,7 +117,13 @@ const Projects = () => {
                                 <SiMysql />
                             </i>
                         </div>
-                        <button className='projectBtn'>View project</button>
+                        <a
+                            className='projectBtn'
+                            href='https://github.com/vivyankonjera/frugal'
+                            target='_blank'
+                        >
+                            View project
+                        </a>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ const Contact = () => {
                 </h3>
 
                 <div>
-                    <a href='mailto:vivyankonjera@gmail.com'>
+                    <a href='mailto:vivyajera@gmail.com'>
                         <i className='bannerIcon contactIcon'>
                             <SiGmail />
                         </i>
@@ -27,9 +27,9 @@ const Contact = () => {
                         </i>
                     </a>
 
-                    <i className='bannerIcon contactIcon'>
+                    {/* <i className='bannerIcon contactIcon'>
                         <SiLinkedin />
-                    </i>
+                    </i> */}
                 </div>
             </div>
         </section>

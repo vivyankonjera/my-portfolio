@@ -27,6 +27,12 @@ const Navbar = () => {
         sections.forEach((section) => {
             observer.observe(section);
         });
+
+        window.addEventListener("resize", () => {
+            setWindowWidth(window.innerWidth);
+        });
+
+        return () => window.removeEventListener("resize");
     }, []);
 
     return (
@@ -38,7 +44,7 @@ const Navbar = () => {
                 className={activeNav === "#intro" ? "active" : ""}
             >
                 {windowWidth > 970 && <AiFillHome />}
-                {windowWidth < 970 && "Home"}
+                {windowWidth <= 970 && "Home"}
             </a>
 
             <a
@@ -48,7 +54,7 @@ const Navbar = () => {
                 className={activeNav === "#experience" ? "active" : ""}
             >
                 {windowWidth > 970 && <HiDocumentText />}
-                {windowWidth < 970 && "Roles"}
+                {windowWidth <= 970 && "Roles"}
             </a>
 
             <a
@@ -58,7 +64,7 @@ const Navbar = () => {
                 className={activeNav === "#projects" ? "active" : ""}
             >
                 {windowWidth > 970 && <HiDesktopComputer />}
-                {windowWidth < 970 && "Projects"}
+                {windowWidth <= 970 && "Projects"}
             </a>
 
             <a
@@ -68,7 +74,7 @@ const Navbar = () => {
                 className={activeNav === "#contact" ? "active" : ""}
             >
                 {windowWidth > 970 && <MdEmail />}
-                {windowWidth < 970 && "Contact"}
+                {windowWidth <= 970 && "Contact"}
             </a>
         </nav>
     );

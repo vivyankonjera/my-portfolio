@@ -12,8 +12,8 @@ const Experience = () => {
             </div>
 
             <div id='timeline'>
-                <a href='#experience' id='timelineEnd'>
-                    <BsArrowUpCircleFill />
+                <a href='#experience' id=''>
+                    <BsArrowUpCircleFill id='timelineEnd' />
                 </a>
             </div>
 

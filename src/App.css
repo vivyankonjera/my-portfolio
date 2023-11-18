@@ -179,11 +179,8 @@ button,
     }
 }
 
-@media screen and (max-width: 458px) {
+@media screen and (max-width: 600px) {
     .heading {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: normal;
         font-size: 18px;
     }
 

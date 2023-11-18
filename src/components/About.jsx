@@ -20,9 +20,9 @@ const About = () => {
                         <div className='centreIntro'>
                             <h1 id='name'>Vivya Nkonjera</h1>
                             <h2 id='title'>Web developer</h2>
-                            <i className='bannerIcon'>
+                            {/* <i className='bannerIcon'>
                                 <SiLinkedin />
-                            </i>
+                            </i> */}
                             <a
                                 href='https://github.com/vivyankonjera'
                                 target='_blank'
@@ -31,7 +31,7 @@ const About = () => {
                                     <SiGithub />
                                 </i>
                             </a>
-                            <a href='mailto:vivyankonjera@gmail.com'>
+                            <a href='mailto:vivyajera@gmail.com'>
                                 <i className='bannerIcon'>
                                     <SiGmail />
                                 </i>
@@ -56,8 +56,9 @@ const About = () => {
                         within web developement, as I aspire to stay at the
                         forefront of this dynamic field. Beginning my journey
                         studying Computing at University, to working as an email
-                        developer to developing my own personal projects, I've
-                        become familiar with the following technologies...
+                        developer, to developing my own personal projects. As a
+                        result I've attained a good understanding with the
+                        following technologies...
                     </p>
                     <p id='aboutText'></p>
                     <div id='aboutIcons'>
@@ -85,7 +86,7 @@ const About = () => {
                             <button className='aboutBtn'>Learn more</button>
                         </a>
                         <div id='btnSeperator'></div>
-                        <a href='#contact'>
+                        <a href='mailto:vivyajera@gmail.com'>
                             <button className='aboutBtn'>Get in touch</button>
                         </a>
                     </div>

@@ -32,6 +32,7 @@
 
 #name {
     margin-left: 15px;
+    padding-right: 10px;
     font-size: 64px;
     font-weight: 800;
     text-transform: uppercase;
@@ -75,6 +76,7 @@
     );
     background-image: url(../images/IR35.jpeg);
     background-size: cover;
+    background-position-y: center;
 }
 
 /* --- ABOUT SECTION --- */

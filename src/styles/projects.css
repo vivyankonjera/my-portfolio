@@ -91,7 +91,7 @@
 
     .projectWrapper {
         flex-direction: column;
-        width: 90%;
+        width: 75%;
         margin-bottom: 50px;
         padding: 0;
     }
@@ -108,5 +108,11 @@
     .projectDetails {
         width: 80%;
         margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projectWrapper {
+        width: 90%;
     }
 }

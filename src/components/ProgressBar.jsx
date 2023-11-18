@@ -13,7 +13,7 @@ const ProgressBar = () => {
         document.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
-    });
+    }, []);
 
     return (
         <div id='progressBar' style={{ width: `${scrollPercentage}` }}></div>
