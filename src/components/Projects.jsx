@@ -31,7 +31,7 @@ const Projects = () => {
                             Ticketly is a helpdesk system that allows user to
                             raise tickets related to website issues. It's built
                             using React on the front-end accompanied by a
-                            Firebase back-end
+                            Firebase back-end.
                         </p>
                         <div className='techStack'>
                             <i className='icon'>
@@ -67,7 +67,7 @@ const Projects = () => {
                             needs, Jabz abs is a custom wordpress theme built
                             utilising PHP, JS, HTML and CSS. The site's data is
                             retireved from an SQL database similar to other wp
-                            themes
+                            themes.
                         </p>
                         <div className='techStack'>
                             <i className='icon'>
