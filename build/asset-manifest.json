@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.135eb90d.css",
-    "main.js": "/my-portfolio/static/js/main.028973cc.js",
+    "main.css": "/my-portfolio/static/css/main.6569628b.css",
+    "main.js": "/my-portfolio/static/js/main.87e66c7f.js",
     "static/js/787.2dcca737.chunk.js": "/my-portfolio/static/js/787.2dcca737.chunk.js",
     "static/media/ticketly.png": "/my-portfolio/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
-    "static/media/deskmob.png": "/my-portfolio/static/media/deskmob.c214bfc207018740b51f.png",
     "static/media/background.jpg": "/my-portfolio/static/media/background.0ff51749d027bbd624d5.jpg",
     "static/media/IR35.jpeg": "/my-portfolio/static/media/IR35.772f2bb2c7f7291b9d37.jpeg",
+    "static/media/IMG_0367.jpeg": "/my-portfolio/static/media/IMG_0367.3343325a0bdf49427a59.jpeg",
     "static/media/IR35 copy.jpg": "/my-portfolio/static/media/IR35 copy.70feae4479972c705897.jpg",
+    "static/media/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.png": "/my-portfolio/static/media/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.0a61bfec10a12c6299be.png",
+    "static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png": "/my-portfolio/static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.d58dee671fc90a42a76d.png",
+    "static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png": "/my-portfolio/static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.19d94e4fe08662a997db.png",
     "static/media/fdeskmob.png": "/my-portfolio/static/media/fdeskmob.003d5470a46b372b39d3.png",
     "index.html": "/my-portfolio/index.html",
-    "main.135eb90d.css.map": "/my-portfolio/static/css/main.135eb90d.css.map",
-    "main.028973cc.js.map": "/my-portfolio/static/js/main.028973cc.js.map",
+    "main.6569628b.css.map": "/my-portfolio/static/css/main.6569628b.css.map",
+    "main.87e66c7f.js.map": "/my-portfolio/static/js/main.87e66c7f.js.map",
     "787.2dcca737.chunk.js.map": "/my-portfolio/static/js/787.2dcca737.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.135eb90d.css",
-    "static/js/main.028973cc.js"
+    "static/css/main.6569628b.css",
+    "static/js/main.87e66c7f.js"
   ]
 }
