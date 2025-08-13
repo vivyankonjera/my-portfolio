@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.801accad.css",
-    "main.js": "/my-portfolio/static/js/main.396ac619.js",
+    "main.css": "/my-portfolio/static/css/main.b23f03e5.css",
+    "main.js": "/my-portfolio/static/js/main.fc278547.js",
     "static/js/453.438d9e50.chunk.js": "/my-portfolio/static/js/453.438d9e50.chunk.js",
     "static/media/ticketly.png": "/my-portfolio/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
     "static/media/background.jpg": "/my-portfolio/static/media/background.0ff51749d027bbd624d5.jpg",
@@ -13,12 +13,12 @@
     "static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png": "/my-portfolio/static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.19d94e4fe08662a997db.png",
     "static/media/fdeskmob.png": "/my-portfolio/static/media/fdeskmob.003d5470a46b372b39d3.png",
     "index.html": "/my-portfolio/index.html",
-    "main.801accad.css.map": "/my-portfolio/static/css/main.801accad.css.map",
-    "main.396ac619.js.map": "/my-portfolio/static/js/main.396ac619.js.map",
+    "main.b23f03e5.css.map": "/my-portfolio/static/css/main.b23f03e5.css.map",
+    "main.fc278547.js.map": "/my-portfolio/static/js/main.fc278547.js.map",
     "453.438d9e50.chunk.js.map": "/my-portfolio/static/js/453.438d9e50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.801accad.css",
-    "static/js/main.396ac619.js"
+    "static/css/main.b23f03e5.css",
+    "static/js/main.fc278547.js"
   ]
 }
