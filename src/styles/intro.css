@@ -10,6 +10,7 @@
 	flex: 1.2;
 	height: 100%;
 	background: #ffffff;
+	justify-items: center;
 }
 
 .introWrapper {
@@ -21,6 +22,7 @@
 	overflow: hidden;
 	box-shadow: 10px 10px 27px -8px rgba(0, 0, 0, 0.16);
 	margin: 5px auto 20px;
+	background-image: url(../images/Untitled.png);
 }
 
 .centreIntro {
@@ -28,6 +30,7 @@
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	text-align: center;
 }
 
 #name {
@@ -49,6 +52,7 @@
 	font-size: 15px;
 	margin-left: 15px;
 	margin-bottom: 16px;
+	color: var(--color-secondary);
 }
 
 .bannerIcon {
@@ -74,7 +78,7 @@
 		rgba(112, 112, 112, 1) 41%,
 		rgba(250, 254, 255, 1) 95%
 	);
-	background-image: url(../images/IMG_0367.jpeg);
+	background-image: url(../images/Untitled.png);
 	background-size: cover;
 	background-position-y: center;
 	background-position-x: center;
@@ -104,11 +108,12 @@
 	overflow: hidden;
 }
 
-#aboutText {
+.aboutText {
 	margin: 32px 60px 0px;
 	text-align: center;
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 300;
+	letter-spacing: 0.5px;
 }
 
 .aboutIcons {
@@ -129,7 +134,7 @@
 	margin: 0.6rem -1.25rem;
 	padding: 0.6rem 1.25rem;
 	transition: all 0.2s ease-in-out;
-	font-weight: 500;
+	font-weight: 700 !important;
 }
 
 .aboutBtn:hover {
@@ -175,11 +180,12 @@
 	.introWrapper {
 		flex-direction: column-reverse;
 		width: 95%;
-		height: 1000px;
+		height: 600px;
 	}
 
 	.introLeft {
 		flex: 1.5;
+		padding-bottom: 36px;
 	}
 
 	.introRight {
@@ -190,7 +196,7 @@
 		margin: 128px 13px 0;
 	}
 
-	#aboutText {
+	.aboutText {
 		font-size: 1rem;
 	}
 
@@ -206,6 +212,10 @@
 }
 
 @media screen and (max-width: 458px) {
+	.introRight {
+		flex: 3;
+	}
+
 	#name {
 		font-size: 48px;
 		line-height: 48px;

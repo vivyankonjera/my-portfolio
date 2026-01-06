@@ -24,21 +24,35 @@ const Experience = () => {
 					</div>
 					<div className="expTop">
 						<p className="timelineTitle">Simpala </p>
-						<p>Salesforce technical consultant</p>
-						<p className="expDate">November 2024 – Present </p>
+						<p>Salesforce Technical Consultant</p>
+						<p className="expDate">November 2024 – November 2025</p>
 					</div>
-					<p className="expDes">
-						Salesforce Account Engagement Specialist, focused on marketing
-						automation, lead nurturing, and campaign optimization. Managed
-						Salesforce Marketing Cloud Account Engagement (Pardot) to enhance
-						sales and marketing alignment, streamline workflows, and drive
-						engagement. Salesforce Core Administration, including user
-						management, data integrity, and process automation. Responsible for
-						integrating Account Engagement with Salesforce Core to ensure
-						seamless data flow, efficient lead management, and actionable
-						reporting. Working closely with a diverse range of clients to tailor
-						solutions that meet unique business goals and requirements.
-					</p>
+					<ul>
+						<li className="expDes">
+							Specializing in marketing automation, lead nurturing, and campaign
+							optimization using Salesforce Marketing Cloud and Account
+							Engagement (Pardot).
+						</li>
+						<li className="expDes">
+							Built targeted campaigns leveraging Email Studio, Journey Builder,
+							Automation Studio, and Content Builder.
+						</li>
+						<li className="expDes">
+							Developed AMPscript-based dynamic personalisation to enhance
+							customer journeys.
+						</li>
+						<li className="expDes">
+							Managed Salesforce Core administration (user management, data
+							integrity, process automation) and developed dashboards and
+							reports to provide actionable business insights.
+						</li>
+
+						<li className="expDes">
+							Customised Salesforce instances using Apex and Lightning Web
+							Components (LWC) to meet unique client requirements and enhance
+							platform functionality.
+						</li>
+					</ul>
 					<div className="expBottom"></div>
 				</section>
 			</div>
@@ -50,18 +64,28 @@ const Experience = () => {
 					</div>
 					<div className="expTop">
 						<p className="timelineTitle">Marcloud Consulting</p>
-						<p>Salesforce consultant</p>
+						<p>Salesforce Consultant</p>
 						<p className="expDate">May – July 2024</p>
 					</div>
-					<p className="expDes">
-						Specialized as a Salesforce Developer in designing and implementing
-						email templates and landing pages to elevate marketing strategies
-						and drive customer engagement. Enhancing implementations of SFMC
-						using Visualforce, and Lightning Web Components. Construction of
-						personalised customer journeys to improve open and conversion rates.
-						Additionally, enabled effective lead capture and data tracking for
-						reporting and campaign optimization.
-					</p>
+					<ul>
+						<li className="expDes">
+							Built and managed Engagement Studio programs to drive prospect
+							engagement through personalised, multi-touch journeys.
+						</li>
+						<li className="expDes">
+							Created dynamic email templates and landing pages using HTML, CSS,
+							and JavaScript to align with brand and campaign objectives.
+						</li>
+						<li className="expDes">
+							Developed automation rules, completion actions, and segmentation
+							lists to streamline lead qualification and assignment.
+						</li>
+						<li className="expDes">
+							Integrated Account Engagement with Salesforce Core to ensure
+							accurate lead tracking, seamless data flow, and actionable
+							reporting for sales teams.
+						</li>
+					</ul>
 					<div className="expBottom"></div>
 				</section>
 			</div>
@@ -73,16 +97,23 @@ const Experience = () => {
 					</div>
 					<div className="expTop">
 						<p className="timelineTitle">RICS </p>
-						<p>Adobe Campaign specialist</p>
+						<p>CRM Technical Specialist</p>
 						<p className="expDate">October 2022 – March 2024</p>
 					</div>
-					<p className="expDes">
-						As the businesses’ main point of contact for email communications,
-						the role’s comprised of managing the business’s outbound email
-						calendar, in addition to building custom emails, allocating
-						communication slots for business departments & providing direction
-						on best email practices and brand guidelines.{" "}
-					</p>
+					<ul>
+						<li className="expDes">
+							Automated marketing communications using Adobe Campaign Standard,
+							improving operational efficiency across business units.
+						</li>
+						<li className="expDes">
+							Created custom HTML email templates and managed the communications
+							calendar via Monday.com.
+						</li>
+						<li className="expDes">
+							Provided strategic email best practices to ensure brand
+							consistency and maximize engagement.
+						</li>
+					</ul>
 					<div className="expBottom"></div>
 				</section>
 			</div>
@@ -94,41 +125,25 @@ const Experience = () => {
 					</div>
 					<div className="expTop">
 						<p className="timelineTitle">Boots UK</p>
-						<p>HTML email developer </p>
+						<p>Adobe Campaign Specialist</p>
 						<p className="expDate">January 2022 – August 2022</p>
 					</div>
-					<p className="expDes">
-						Ensuring marketing communications are delivered a timely manner,
-						whilst coordinating with other marketing departments. Working
-						primarily with Adobe campaign and adobe experience manager, emails
-						were developed using a combination of HTML, CSS &amp; JavaScript.
-						Providing a personalised marketing experience to customers. Also
-						responsible for customer communications via the official Boots UK
-						mobile application.
-					</p>
-					<div className="expBottom"></div>
-				</section>
-			</div>
-
-			<div className="timelineRow rowLeft">
-				<section>
-					<div className="timelineMark">
-						<div className="centerMark"></div>
-					</div>
-					<div className="expTop">
-						<p className="timelineTitle">GoDaddy</p>
-						<p>Hosting Sales & Support </p>
-						<p className="expDate">November 2020 – April 2021</p>
-					</div>
-					<p className="expDes">
-						As part of hosting support, responsibilities consisted of diagnosing
-						various web hosting related issues users may have been experiencing.
-						Issues ranged from DNS matters, website migrations and general
-						maintenance of their web servers. An additional duty included
-						consulting customers on the various web services offered by the
-						company and advising how they could be best utilised to fit their
-						requirements.
-					</p>
+					<ul>
+						<li className="expDes">
+							Managed delivery of marketing communications across multiple
+							channels.
+						</li>
+						<li className="expDes">
+							Developed email templates in Adobe Campaign Classic and Adobe
+							Experience Manager using HTML, CSS, and JavaScript.
+						</li>
+						<li className="expDes">
+							Integrated Movable Ink for enhanced email personalisation.
+						</li>
+						<li className="expDes">
+							Managed mobile app customer communications via Airship.
+						</li>
+					</ul>
 					<div className="expBottom"></div>
 				</section>
 			</div>
