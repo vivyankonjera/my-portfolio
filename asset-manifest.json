@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.8c5d61ec.css",
-    "main.js": "/my-portfolio/static/js/main.3a7f1fa8.js",
+    "main.css": "/my-portfolio/static/css/main.00d91039.css",
+    "main.js": "/my-portfolio/static/js/main.a7f1cc93.js",
     "static/js/453.15a626a8.chunk.js": "/my-portfolio/static/js/453.15a626a8.chunk.js",
     "static/media/ticketly.png": "/my-portfolio/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
     "static/media/IR35.jpeg": "/my-portfolio/static/media/IR35.772f2bb2c7f7291b9d37.jpeg",
@@ -11,13 +11,14 @@
     "static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png": "/my-portfolio/static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.d58dee671fc90a42a76d.png",
     "static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png": "/my-portfolio/static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.19d94e4fe08662a997db.png",
     "static/media/fdeskmob.png": "/my-portfolio/static/media/fdeskmob.003d5470a46b372b39d3.png",
+    "static/media/SF-Platform-Developer.png": "/my-portfolio/static/media/SF-Platform-Developer.54c007cf6af4fe70de9e.png",
     "index.html": "/my-portfolio/index.html",
-    "main.8c5d61ec.css.map": "/my-portfolio/static/css/main.8c5d61ec.css.map",
-    "main.3a7f1fa8.js.map": "/my-portfolio/static/js/main.3a7f1fa8.js.map",
+    "main.00d91039.css.map": "/my-portfolio/static/css/main.00d91039.css.map",
+    "main.a7f1cc93.js.map": "/my-portfolio/static/js/main.a7f1cc93.js.map",
     "453.15a626a8.chunk.js.map": "/my-portfolio/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c5d61ec.css",
-    "static/js/main.3a7f1fa8.js"
+    "static/css/main.00d91039.css",
+    "static/js/main.a7f1cc93.js"
   ]
 }
