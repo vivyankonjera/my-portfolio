@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c33b329.css",
+    "main.css": "/static/css/main.252c6a76.css",
     "main.js": "/static/js/main.70a61c13.js",
     "static/js/453.15a626a8.chunk.js": "/static/js/453.15a626a8.chunk.js",
     "static/media/ticketly.png": "/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
@@ -13,12 +13,12 @@
     "static/media/fdeskmob.png": "/static/media/fdeskmob.003d5470a46b372b39d3.png",
     "static/media/Boots-UK-Logo.png": "/static/media/Boots-UK-Logo.339d64081c4f2dc925fa.png",
     "index.html": "/index.html",
-    "main.1c33b329.css.map": "/static/css/main.1c33b329.css.map",
+    "main.252c6a76.css.map": "/static/css/main.252c6a76.css.map",
     "main.70a61c13.js.map": "/static/js/main.70a61c13.js.map",
     "453.15a626a8.chunk.js.map": "/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c33b329.css",
+    "static/css/main.252c6a76.css",
     "static/js/main.70a61c13.js"
   ]
 }
