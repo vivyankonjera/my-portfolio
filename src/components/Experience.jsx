@@ -5,147 +5,143 @@ import { MdReadMore } from "react-icons/md";
 const Experience = () => {
 	return (
 		<section id="experience" className="sectionContainer expSection">
-			<div id="headingContainer">
-				<h1 className="heading" id="experiencePrompt">
-					My <span className="keyword">Experience</span> thus far
-				</h1>
-			</div>
+			<div className="w90">
+				<div id="headingContainer">
+					<h1 className="heading" id="experiencePrompt">
+						Business <span className="keyword">Experience</span>
+					</h1>
+				</div>
 
-			<div id="timeline">
-				<a href="#experience" id="">
-					<BsArrowUpCircleFill id="timelineEnd" />
-				</a>
-			</div>
+				<div id="timeline">
+					<a href="#experience" id="">
+						<BsArrowUpCircleFill id="timelineEnd" />
+					</a>
+				</div>
 
-			<div className="timelineRow rowLeft">
-				<section>
-					<div className="timelineMark">
-						<div className="centerMark"></div>
-					</div>
-					<div className="expTop">
-						<p className="timelineTitle">Simpala </p>
-						<p>Salesforce Technical Consultant</p>
-						<p className="expDate">November 2024 – November 2025</p>
-					</div>
-					<ul>
-						<li className="expDes">
+				<div className="timelineRow rowLeft">
+					<section>
+						<div className="timelineMark">
+							<div className="centerMark"></div>
+						</div>
+						<div className="expTop">
+							<div className="companyAndRole">
+								<p className="timelineTitle">Simpala</p>
+								<p className="jobRole">Salesforce Technical Consultant</p>
+							</div>
+							<img
+								className="companyLogo"
+								src={require("../images/Simpala-Logo.jpeg")}
+								alt="Simpala Logo"
+							/>
+						</div>
+						<p className="expDes">
 							Specializing in marketing automation, lead nurturing, and campaign
 							optimization using Salesforce Marketing Cloud and Account
-							Engagement (Pardot).
-						</li>
-						<li className="expDes">
-							Built targeted campaigns leveraging Email Studio, Journey Builder,
-							Automation Studio, and Content Builder.
-						</li>
-						<li className="expDes">
-							Developed AMPscript-based dynamic personalisation to enhance
-							customer journeys.
-						</li>
-						<li className="expDes">
-							Managed Salesforce Core administration (user management, data
-							integrity, process automation) and developed dashboards and
-							reports to provide actionable business insights.
-						</li>
+							Engagement (Pardot) by Salesforce. Built targeted campaigns
+							leveraging Email Studio, Journey Builder, Automation Studio, and
+							Content Builder, while developing AMPscript-based dynamic
+							personalization to enhance customer journeys. Managed Salesforce
+							Core administration, including user management, data integrity,
+							and process automation, and created dashboards and reports to
+							deliver actionable business insights. Additionally, customized
+							Salesforce instances using Apex and Lightning Web Components (LWC)
+							to meet unique client requirements and enhance overall platform
+							functionality.
+						</p>
+						<div className="expBottom"></div>
+					</section>
+				</div>
 
-						<li className="expDes">
-							Customised Salesforce instances using Apex and Lightning Web
-							Components (LWC) to meet unique client requirements and enhance
-							platform functionality.
-						</li>
-					</ul>
-					<div className="expBottom"></div>
-				</section>
-			</div>
-
-			<div className="timelineRow rowRight">
-				<section>
-					<div className="timelineMark">
-						<div className="centerMark"></div>
-					</div>
-					<div className="expTop">
-						<p className="timelineTitle">Marcloud Consulting</p>
-						<p>Salesforce Consultant</p>
-						<p className="expDate">May – July 2024</p>
-					</div>
-					<ul>
-						<li className="expDes">
+				<div className="timelineRow rowRight">
+					<section>
+						<div className="timelineMark">
+							<div className="centerMark"></div>
+						</div>
+						<div className="expTop">
+							<div className="companyAndRole">
+								<p className="timelineTitle">Marcloud Consulting</p>
+								<p className="jobRole">Account Engagement Consultant</p>
+							</div>
+							<img
+								className="companyLogo"
+								src={require("../images/Marcloud-Logo.jpeg")}
+								alt="Marcloud Logo"
+							/>
+						</div>
+						<p className="expDes">
 							Built and managed Engagement Studio programs to drive prospect
-							engagement through personalised, multi-touch journeys.
-						</li>
-						<li className="expDes">
-							Created dynamic email templates and landing pages using HTML, CSS,
-							and JavaScript to align with brand and campaign objectives.
-						</li>
-						<li className="expDes">
-							Developed automation rules, completion actions, and segmentation
-							lists to streamline lead qualification and assignment.
-						</li>
-						<li className="expDes">
-							Integrated Account Engagement with Salesforce Core to ensure
-							accurate lead tracking, seamless data flow, and actionable
-							reporting for sales teams.
-						</li>
-					</ul>
-					<div className="expBottom"></div>
-				</section>
-			</div>
+							engagement through personalized, multi-touch journeys. Created
+							dynamic email templates and landing pages using HTML, CSS, and
+							JavaScript to ensure alignment with brand guidelines and campaign
+							objectives. Developed automation rules, completion actions, and
+							segmentation lists to streamline lead qualification and assignment
+							processes. Integrated Account Engagement with Salesforce Core to
+							enable accurate lead tracking, seamless data flow, and actionable
+							reporting that empowered sales teams to respond effectively.
+						</p>
+						<div className="expBottom"></div>
+					</section>
+				</div>
 
-			<div className="timelineRow rowLeft">
-				<section>
-					<div className="timelineMark">
-						<div className="centerMark"></div>
-					</div>
-					<div className="expTop">
-						<p className="timelineTitle">RICS </p>
-						<p>CRM Technical Specialist</p>
-						<p className="expDate">October 2022 – March 2024</p>
-					</div>
-					<ul>
-						<li className="expDes">
-							Automated marketing communications using Adobe Campaign Standard,
-							improving operational efficiency across business units.
-						</li>
-						<li className="expDes">
+				<div className="timelineRow rowLeft">
+					<section>
+						<div className="timelineMark">
+							<div className="centerMark"></div>
+						</div>
+						<div className="expTop">
+							<div className="companyAndRole">
+								<p className="timelineTitle">RICS </p>
+								<p className="jobRole">CRM Technical Specialist</p>
+							</div>
+							<img
+								className="companyLogo"
+								src={require("../images/RICS-LOGO.png")}
+								alt="RICS Logo"
+							/>
+						</div>
+						<p className="expDes">
+							Automated marketing communications using Adobe Campaign Standard
+							by Adobe, improving operational efficiency across business units.
 							Created custom HTML email templates and managed the communications
-							calendar via Monday.com.
-						</li>
-						<li className="expDes">
-							Provided strategic email best practices to ensure brand
-							consistency and maximize engagement.
-						</li>
-					</ul>
-					<div className="expBottom"></div>
-				</section>
-			</div>
+							calendar through Monday.com to ensure streamlined planning and
+							execution. Provided strategic email marketing best practices to
+							maintain brand consistency and maximize audience engagement across
+							campaigns.
+						</p>
+						<div className="expBottom"></div>
+					</section>
+				</div>
 
-			<div className="timelineRow rowRight">
-				<section>
-					<div className="timelineMark">
-						<div className="centerMark"></div>
-					</div>
-					<div className="expTop">
-						<p className="timelineTitle">Boots UK</p>
-						<p>Adobe Campaign Specialist</p>
-						<p className="expDate">January 2022 – August 2022</p>
-					</div>
-					<ul>
-						<li className="expDes">
+				<div className="timelineRow rowRight">
+					<section>
+						<div className="timelineMark">
+							<div className="centerMark"></div>
+						</div>
+						<div className="expTop">
+							<div className="companyAndRole">
+								<p className="timelineTitle">Boots UK</p>
+								<p className="jobRole">Adobe Campaign Specialist</p>
+							</div>
+							<img
+								className="companyLogo"
+								src={require("../images/Boots-UK-Logo.png")}
+								alt="Boots UK Logo"
+							/>
+						</div>
+						<p className="expDes">
 							Managed delivery of marketing communications across multiple
-							channels.
-						</li>
-						<li className="expDes">
+							channels to ensure consistent messaging and timely execution.
 							Developed email templates in Adobe Campaign Classic and Adobe
-							Experience Manager using HTML, CSS, and JavaScript.
-						</li>
-						<li className="expDes">
-							Integrated Movable Ink for enhanced email personalisation.
-						</li>
-						<li className="expDes">
-							Managed mobile app customer communications via Airship.
-						</li>
-					</ul>
-					<div className="expBottom"></div>
-				</section>
+							Experience Manager using HTML, CSS, and JavaScript through Adobe,
+							supporting scalable and brand-aligned digital campaigns.
+							Integrated Movable Ink to enhance email personalization with
+							dynamic content capabilities, and managed mobile app customer
+							communications via Airship to deliver targeted, real-time
+							messaging experiences.
+						</p>
+						<div className="expBottom"></div>
+					</section>
+				</div>
 			</div>
 		</section>
 	);

@@ -12,8 +12,24 @@
 	bottom: 7px;
 }
 
+.expTop {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 28px;
+}
+
 .expSection p {
 	font-weight: 400;
+}
+
+.jobRole {
+	font-family: "Caveat", cursive;
+	font-size: 20px;
+}
+
+.companyLogo {
+	width: 40px;
+	height: 40px;
 }
 
 #headingContainer {
@@ -52,7 +68,9 @@
 	bottom: -30px;
 	transform: translateX(-50%);
 	z-index: 9;
-	transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	transition:
+		all 0.3s ease-in-out,
+		box-shadow 0.3s ease-in-out;
 }
 
 #timelineEnd:hover {
@@ -71,9 +89,12 @@
 	width: calc(50% - 80px);
 	padding: 20px;
 	position: relative;
-	-webkit-box-shadow: 0px 10px 13px -7px #000000,
+	-webkit-box-shadow:
+		0px 10px 13px -7px #000000,
 		4px 10px 15px 0px rgba(0, 0, 0, 0);
-	box-shadow: 0px 10px 13px -7px #000000, 4px 10px 15px 0px rgba(0, 0, 0, 0);
+	box-shadow:
+		0px 10px 13px -7px #000000,
+		4px 10px 15px 0px rgba(0, 0, 0, 0);
 }
 
 .timelineRow section::before {
@@ -163,6 +184,10 @@
 /* --- MEDIA QUERIES --- */
 
 @media screen and (max-width: 970px) {
+	.expSection > div {
+		width: 100%;
+	}
+
 	#timeline {
 		left: 28px;
 	}
@@ -182,5 +207,11 @@
 
 	.rowLeft .timelineMark {
 		left: -40px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.timelineRow section {
+		width: 84%;
 	}
 }

@@ -11,9 +11,9 @@ import {
 const Projects = () => {
 	return (
 		<section>
-			<div className="sectionContainer aboutBg" id="projects">
+			<div className="sectionContainer" id="projects">
 				<h1 className="heading" id="projectsPrompt">
-					Web development <span className="keyword">Projects</span>
+					Coding <span className="keyword">Projects</span>
 				</h1>
 
 				<div className="projectWrapper">

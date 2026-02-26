@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.80b1690d.css",
-    "main.js": "/my-portfolio/static/js/main.3a7f1fa8.js",
-    "static/js/453.15a626a8.chunk.js": "/my-portfolio/static/js/453.15a626a8.chunk.js",
-    "static/media/ticketly.png": "/my-portfolio/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
-    "static/media/IR35.jpeg": "/my-portfolio/static/media/IR35.772f2bb2c7f7291b9d37.jpeg",
-    "static/media/Untitled.png": "/my-portfolio/static/media/Untitled.7ab80f42eda0a8e20dfd.png",
-    "static/media/IR35 copy.jpg": "/my-portfolio/static/media/IR35 copy.70feae4479972c705897.jpg",
-    "static/media/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.png": "/my-portfolio/static/media/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.0a61bfec10a12c6299be.png",
-    "static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png": "/my-portfolio/static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.d58dee671fc90a42a76d.png",
-    "static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png": "/my-portfolio/static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.19d94e4fe08662a997db.png",
-    "static/media/fdeskmob.png": "/my-portfolio/static/media/fdeskmob.003d5470a46b372b39d3.png",
-    "index.html": "/my-portfolio/index.html",
-    "main.80b1690d.css.map": "/my-portfolio/static/css/main.80b1690d.css.map",
-    "main.3a7f1fa8.js.map": "/my-portfolio/static/js/main.3a7f1fa8.js.map",
-    "453.15a626a8.chunk.js.map": "/my-portfolio/static/js/453.15a626a8.chunk.js.map"
+    "main.css": "/static/css/main.e8e6da33.css",
+    "main.js": "/static/js/main.983097b5.js",
+    "static/js/453.15a626a8.chunk.js": "/static/js/453.15a626a8.chunk.js",
+    "static/media/ticketly.png": "/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
+    "static/media/IR35.jpeg": "/static/media/IR35.772f2bb2c7f7291b9d37.jpeg",
+    "static/media/Untitled.png": "/static/media/Untitled.7ab80f42eda0a8e20dfd.png",
+    "static/media/IR35 copy.jpg": "/static/media/IR35 copy.70feae4479972c705897.jpg",
+    "static/media/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.png": "/static/media/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.0a61bfec10a12c6299be.png",
+    "static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png": "/static/media/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.d58dee671fc90a42a76d.png",
+    "static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png": "/static/media/2023-07_Badge_SF-Certified_AI-Associate_High-Res.19d94e4fe08662a997db.png",
+    "static/media/fdeskmob.png": "/static/media/fdeskmob.003d5470a46b372b39d3.png",
+    "static/media/Boots-UK-Logo.png": "/static/media/Boots-UK-Logo.339d64081c4f2dc925fa.png",
+    "index.html": "/index.html",
+    "main.e8e6da33.css.map": "/static/css/main.e8e6da33.css.map",
+    "main.983097b5.js.map": "/static/js/main.983097b5.js.map",
+    "453.15a626a8.chunk.js.map": "/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80b1690d.css",
-    "static/js/main.3a7f1fa8.js"
+    "static/css/main.e8e6da33.css",
+    "static/js/main.983097b5.js"
   ]
 }

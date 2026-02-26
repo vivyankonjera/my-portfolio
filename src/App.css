@@ -3,6 +3,8 @@
 @import "./styles/projects.css";
 @import "styles/contact.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 * {
 	padding: 0;
@@ -13,7 +15,8 @@
 	--color-bg: #fafafa;
 	--color-bg-alt: #e9e9e9;
 	--color-primary: #01091e;
-	--color-secondary: #bb167c;
+	--color-secondary: #b21475;
+	--color-tertiary: #1a1151;
 
 	scroll-behavior: smooth;
 }
@@ -28,46 +31,83 @@ body {
 	/* background-image: url("images/background.jpg"); */
 }
 
+#logo {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	color: var(--color-secondary);
+	font-weight: 900;
+	font-size: 32px;
+	margin-left: 20px;
+}
+
+#emailBtn {
+	font-size: 32px;
+	color: var(--color-secondary);
+	margin-right: 20px;
+	position: relative;
+	top: 2px;
+}
+
+#emailBtn:hover {
+	color: var(--color-primary);
+}
+
 nav {
-	position: fixed;
-	bottom: 50%;
-	transform: translateY(50%);
-	left: 0;
-	z-index: 10;
-	background: rgba(0, 0, 0, 0.3);
-	background: white;
-	padding: 11px 10px;
-	border-radius: 15px;
 	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	backdrop-filter: blur(15px);
-	-webkit-box-shadow: 10px 10px 27px -8px rgba(0, 0, 0, 0.16);
-	box-shadow: 10px 10px 27px -8px rgba(0, 0, 0, 0.16);
+	justify-content: space-between;
+	position: sticky;
+	top: 7px;
+	transform: translateY(0);
+	width: 100%;
+	height: 40px;
+	border-radius: 0;
+	padding: 11px 0;
+	z-index: 50;
+	border-radius: 0;
+	/* box-shadow: 10px 10px 27px -8px #00000029; */
+	background-color: white;
+}
+
+.navigationBar {
+	justify-content: center;
+	flex-direction: row;
+	display: flex;
+	justify-content: space-around;
+	gap: 0;
+	padding: 11px 0;
+	width: 45%;
+	margin: 0 auto;
 }
 
 nav a {
-	font-size: 1.2rem;
-	color: var(--color-primary);
-	padding: 0.4rem 1.2rem;
-	border-radius: 7px;
-	background-color: none;
-	width: 33%;
-	transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 	align-self: center;
+	font-size: 0.9rem;
 	text-decoration: none;
-	font-family: impact;
+	font-family:
+		mon-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serifospace;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: var(--color-primary);
+	padding: 6px;
+	border-radius: 6px;
 }
 
 nav a:hover {
-	background-color: var(--color-secondary);
-	color: white;
+	color: var(--color-secondary);
 }
 
 nav a.active {
-	background: rgba(0, 0, 0, 0.5);
-	background: var(--color-primary);
-	color: var(--color-bg);
+	background-color: #bb167c;
+	color: #ffffff;
+}
+
+.card {
+	padding: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 10px 10px 27px -8px rgba(0, 0, 0, 0.16);
+	margin: 16px auto;
 }
 
 button,
@@ -84,14 +124,21 @@ button,
 	text-decoration: none;
 }
 
-#progressBar {
+.progressContainer {
 	position: fixed;
-	top: 0;
-	z-index: 20;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	margin: 0 auto;
 	height: 7px;
+	z-index: 60;
+	background-color: white;
+}
+
+#progressBar {
 	background-color: var(--color-secondary);
-	border-radius: 0px 2px 2px 0px;
-	padding-right: 2px;
+	border-radius: 0 2px 2px 0px;
+	height: 7px;
 }
 
 #scrollTopBtn {
@@ -99,22 +146,27 @@ button,
 	padding: 0;
 	margin: 0;
 	font-size: 44px;
+	height: 44px;
+	width: 44px;
 	text-align: center;
 	position: fixed;
 	bottom: 10px;
-	right: 20px;
+	right: -10px;
 	transform: translateX(-50%);
 	z-index: 9;
 	transition: all 0.1s ease-in-out;
+	background-color: white;
+	border-radius: 50%;
 }
 
 #scrollTopBtn:hover {
+	width: 48px;
+	height: 48px;
 	font-size: 48px;
 }
 
 .sectionContainer {
-	width: 70%;
-	height: auto;
+	width: 95%;
 	margin: 0 auto;
 }
 
@@ -125,6 +177,12 @@ button,
 	font-weight: normal;
 	font-size: 24px;
 	letter-spacing: -1px;
+	font-family: Oxanium;
+}
+
+.w90 {
+	width: 90%;
+	margin: 0 auto;
 }
 
 .keyword {
@@ -132,7 +190,6 @@ button,
 }
 
 .subHeading {
-	margin-top: 60px;
 	font-size: 20px;
 	letter-spacing: 0px;
 	font-weight: 600;
@@ -152,44 +209,43 @@ button,
 }
 
 @media screen and (max-width: 970px) {
-	nav {
-		top: 0;
-		transform: translateY(0);
-		justify-content: center;
-		flex-direction: row;
+	.progressContainer {
 		width: 100%;
-		height: 40px;
-		border-radius: 0;
-		display: flex;
-		justify-content: space-around;
-		gap: 0;
-		padding: 11px 0;
-	}
-
-	nav a {
-		align-self: center;
-		font-size: 0.9rem;
-		text-decoration: none;
-		font-family: monospace;
-		text-transform: uppercase;
 	}
 
 	#scrollTopBtn {
 		right: -7px;
 		font-size: 36px;
+		width: 36px;
+		height: 36px;
+	}
+}
+
+@media screen and (max-width: 730px) {
+	nav {
+		background-color: white;
+	}
+
+	.progressContainer {
+		background-color: white;
+	}
+
+	.navigationBar {
+		width: 100%;
+	}
+
+	#logo,
+	#emailBtn {
+		display: none;
 	}
 }
 
 @media screen and (max-width: 560px) {
-	.heading {
-		font-size: 18px;
-	}
-
-	.timelineRow section {
-		width: 84%;
-	}
-
 	#scrollTopBtn {
 		display: none;
+	}
+
+	nav a {
+		font-size: 0.7rem;
 	}
 }

@@ -18,57 +18,55 @@ const About = () => {
 			<section className="sectionContainer" id="intro">
 				<div className="introWrapper">
 					<div className="introLeft">
+						<div className="bannerShape"></div>
 						<div className="centreIntro">
-							<h1 id="name">Vivya Nkonjera</h1>
+							<h1 id="name">VEECODESFORCE</h1>
 							<h2 id="title">
-								Certified <b>Salesforce</b> Developer
+								Automation <b>Engineered Right</b>
 							</h2>
 							{/* <i className='bannerIcon'>
                                 <SiLinkedin />
                             </i> */}
-							<a
-								href="https://github.com/vivyankonjera?tab=repositories"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<i className="bannerIcon">
-									<SiGithub />
-								</i>
-							</a>
-							<a
-								href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<i className="bannerIcon">
-									<SiLinkedin />
-								</i>
-							</a>
-							<a href="https://www.salesforce.com/trailblazer/sb7kb73xxtqfenwrfn">
-								<i className="bannerIcon">
-									<SiSalesforce />
-								</i>
-							</a>
+							<div className="bannerIcons">
+								<a
+									href="https://github.com/vivyankonjera?tab=repositories"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="bannerIcon">
+										<SiGithub />
+									</i>
+								</a>
+								<a
+									href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="bannerIcon">
+										<SiLinkedin />
+									</i>
+								</a>
+								<a
+									href="https://www.salesforce.com/trailblazer/sb7kb73xxtqfenwrfn"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="bannerIcon">
+										<SiSalesforce />
+									</i>
+								</a>
+							</div>
 						</div>
 					</div>
 
-					<div className="introRight"></div>
+					<div className="introRight">
+						<div className="bannerShapeRight"></div>
+					</div>
 				</div>
 
-				<div className="aboutBg">
-					<div className="border"></div>
-					<h1 className="heading">
-						Allow me to <span className="keyword">introduce</span> myself
-					</h1>
-
-					<div>
-						{/* <h3 className="subHeading">Certifications</h3> */}
-						<div className="aboutIcons">
-							{/* 	<img
-								src={require("../images/SF-Platform-Developer.png")}
-								alt=""
-								className="certIcon"
-							/> */}
+				<div class="aboutBg">
+					<div class="aboutC w90">
+						<div class="certificationsContainer">
 							<img
 								src={require("../images/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png")}
 								alt=""
@@ -85,69 +83,41 @@ const About = () => {
 								className="certIcon"
 							/>
 						</div>
-					</div>
-
-					<p className="aboutText">
-						I’m a Salesforce-certified technical consultant with 3+ years of
-						hands-on experience helping brands turn data into meaningful
-						customer experiences. I’ve worked across a range of industries,
-						building smart, personalized marketing strategies using tools like
-						Salesforce Core, Marketing Cloud, and Adobe Campaign.
-					</p>
-
-					<p className="aboutText">
-						Alongside my CRM and automation ability, I have a strong foundation
-						in front-end and web technologies — including HTML, CSS, JavaScript,
-						SQL, and modern JavaScript frameworks like React. This technical
-						versatility helps me bridge the gap between strategy and execution,
-						bringing ideas to life through both code and creativity. I’m
-						certified as a Salesforce Administrator and Account Engagement
-						Specialist, and currently working toward the Platform Developer I
-						certification to expand my development capabilities.
-					</p>
-					<p className="aboutText">
-						Beyond the tech, I’m passionate about clean design and intuitive UX.
-						I love creating digital experiences that not only look good but feel
-						good to use. Whether it’s crafting a seamless user journey or
-						tailoring solutions to fit a client’s unique business goals, I’m all
-						about combining function and form to deliver real results.
-					</p>
-
-					<div>
-						<h3 className="subHeading">My Tech stacks</h3>
-						<div className="aboutIcons">
-							<i className="icon">
-								<SiReact />
-							</i>
-							<i className="icon">
-								<SiJavascript />
-							</i>
-							<i className="icon">
-								<SiHtml5 />
-							</i>
-							<i className="icon">
-								<SiCss3 />
-							</i>
-							<i className="icon">
-								<SiPhp />
-							</i>
-							<i className="icon">
-								<SiMysql />
-							</i>
+						<div class="aboutTextContainer">
+							<h1 class="heading aboutText">
+								A brief <span class="keyword">introduction</span>
+							</h1>
+							<p class="aboutText">
+								I’m a Salesforce certified technical consultant helping
+								businesses implement and optimize Salesforce and Marketing Cloud
+								to drive scalable sales and marketing operations. With over
+								three years of hands-on experience, I deliver robust CRM and
+								marketing automation solutions built around clean data,
+								efficient processes, and clear business requirements. My
+								experience includes end to end Salesforce delivery, including
+								data modeling, integrations, audience segmentation, campaign
+								automation, and reporting across Salesforce Core, Marketing
+								Cloud, and Account Engagement. I work across both solution
+								design and build to ensure implementations are maintainable,
+								performant, and ready to scale. I also bring strong development
+								capability in Apex, Lightning Web Components, and SOQL and SQL,
+								allowing me to extend Salesforce where standard functionality
+								falls short.
+							</p>
+							<div id="aboutBtns">
+								<a href="#experience">
+									<button className="aboutBtn">Learn more</button>
+								</a>
+								<div id="btnSeperator"></div>
+								<a
+									href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<button class="aboutBtn">Get in touch</button>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div id="aboutBtns">
-						<a href="#experience">
-							<button className="aboutBtn">Learn more</button>
-						</a>
-						<div id="btnSeperator"></div>
-						<a
-							href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<button className="aboutBtn">Get in touch</button>
-						</a>
 					</div>
 				</div>
 			</section>
