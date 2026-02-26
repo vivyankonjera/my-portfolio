@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.b71e8809.css",
-    "main.js": "/my-portfolio/static/js/main.8ef4d2a6.js",
+    "main.css": "/my-portfolio/static/css/main.3909723e.css",
+    "main.js": "/my-portfolio/static/js/main.bf42a4dd.js",
     "static/js/453.15a626a8.chunk.js": "/my-portfolio/static/js/453.15a626a8.chunk.js",
     "static/media/ticketly.png": "/my-portfolio/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
     "static/media/IR35.jpeg": "/my-portfolio/static/media/IR35.772f2bb2c7f7291b9d37.jpeg",
@@ -13,12 +13,12 @@
     "static/media/fdeskmob.png": "/my-portfolio/static/media/fdeskmob.003d5470a46b372b39d3.png",
     "static/media/Boots-UK-Logo.png": "/my-portfolio/static/media/Boots-UK-Logo.339d64081c4f2dc925fa.png",
     "index.html": "/my-portfolio/index.html",
-    "main.b71e8809.css.map": "/my-portfolio/static/css/main.b71e8809.css.map",
-    "main.8ef4d2a6.js.map": "/my-portfolio/static/js/main.8ef4d2a6.js.map",
+    "main.3909723e.css.map": "/my-portfolio/static/css/main.3909723e.css.map",
+    "main.bf42a4dd.js.map": "/my-portfolio/static/js/main.bf42a4dd.js.map",
     "453.15a626a8.chunk.js.map": "/my-portfolio/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b71e8809.css",
-    "static/js/main.8ef4d2a6.js"
+    "static/css/main.3909723e.css",
+    "static/js/main.bf42a4dd.js"
   ]
 }
