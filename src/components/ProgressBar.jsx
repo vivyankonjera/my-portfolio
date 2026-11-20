@@ -1,23 +1,34 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
+// Decorative reading-progress bar. Uses transform (not width) to stay off the layout path.
 const ProgressBar = () => {
-	const [scrollPercentage, setScrollPercentage] = useState();
-	const handleScroll = () => {
-		const { scrollHeight, scrollTop } = document.documentElement;
-		setScrollPercentage(
-			`${(scrollTop / (scrollHeight - window.innerHeight)) * 100}%`,
-		);
-	};
+	const barRef = useRef(null);
 
 	useEffect(() => {
-		document.addEventListener("scroll", handleScroll);
-
-		return () => window.removeEventListener("scroll", handleScroll);
+		let frame = 0;
+		const update = () => {
+			frame = 0;
+			const { scrollHeight, scrollTop } = document.documentElement;
+			const max = scrollHeight - window.innerHeight;
+			const progress = max > 0 ? scrollTop / max : 0;
+			if (barRef.current) barRef.current.style.transform = `scaleX(${progress})`;
+		};
+		const onScroll = () => {
+			if (!frame) frame = window.requestAnimationFrame(update);
+		};
+		update();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		window.addEventListener("resize", onScroll);
+		return () => {
+			window.removeEventListener("scroll", onScroll);
+			window.removeEventListener("resize", onScroll);
+			if (frame) window.cancelAnimationFrame(frame);
+		};
 	}, []);
 
 	return (
-		<div className="progressContainer">
-			<div id="progressBar" style={{ width: `${scrollPercentage}` }}></div>
+		<div className="progressContainer" aria-hidden="true">
+			<div id="progressBar" ref={barRef} style={{ transform: "scaleX(0)" }} />
 		</div>
 	);
 };
