@@ -1,45 +1,102 @@
 import React from "react";
-import { SiLinkedin, SiGithub } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiSalesforce } from "react-icons/si";
+import { LuArrowUpRight, LuFileText, LuMail } from "react-icons/lu";
+import { links, profile } from "../data/content";
+import useReveal from "../hooks/useReveal";
+import ResumeButton from "./ResumeButton";
+
+const CHANNELS = [
+	{
+		href: links.linkedin,
+		label: "LinkedIn",
+		detail: "Best way to reach me",
+		Icon: SiLinkedin,
+	},
+	{
+		href: links.github,
+		label: "GitHub",
+		detail: "Code & repositories",
+		Icon: SiGithub,
+	},
+	{
+		href: links.trailblazer,
+		label: "Trailblazer",
+		detail: "Salesforce profile",
+		Icon: SiSalesforce,
+	},
+];
 
 const Contact = () => {
+	const ref = useReveal();
+	const year = new Date().getFullYear();
+
 	return (
-		<section>
-			<div className="sectionContainer" id="contact">
-				<h1 className="heading">
-					Keep in <span className="keyword">Touch</span>
-				</h1>
-				<h3 id="contactFollowUp">
-					This doesn't have to be the end, please do not hesitate to <br />{" "}
-					reach out on the following...
-				</h3>
+		<>
+			<section id="contact" className="section contact" aria-labelledby="contact-title" ref={ref}>
+				<div className="container">
+					<div className="contactCard reveal">
+						<span className="contactGlow" aria-hidden="true" />
+						<div className="contactCopy">
+							<p className="eyebrow eyebrowOnDark">contact.init()</p>
+							<h2 id="contact-title" className="contactTitle">
+								Keep in touch
+							</h2>
+							<p className="contactLead">
+								This doesn’t have to be the end. Whether it’s a role, a project or a
+								question about Salesforce, please don’t hesitate to reach out.
+							</p>
 
-				<div className="footerIcons">
-					<a
-						href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<i className="bannerIcon contactIcon">
-							<SiLinkedin />
-						</i>
-					</a>
+							<div className="contactActions">
+								<a
+									href={links.linkedin}
+									target="_blank"
+									rel="noreferrer"
+									className="btn btnPrimary btnOnDark"
+								>
+									<SiLinkedin aria-hidden="true" /> Message me on LinkedIn
+									<span className="visuallyHidden"> (opens in a new tab)</span>
+								</a>
+								{profile.email && (
+									<a href={`mailto:${profile.email}`} className="btn btnGhost">
+										<LuMail aria-hidden="true" /> {profile.email}
+									</a>
+								)}
+								<ResumeButton className="btn btnGhost">
+									<LuFileText aria-hidden="true" />
+								</ResumeButton>
+							</div>
+						</div>
 
-					<a
-						href="https://github.com/vivyankonjera?tab=repositories"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<i className="bannerIcon contactIcon">
-							<SiGithub />
-						</i>
-					</a>
-
-					{/* <i className='bannerIcon contactIcon'>
-                        <SiLinkedin />
-                    </i> */}
+						<ul className="channelList" aria-label="Find me online">
+							{CHANNELS.map(({ href, label, detail, Icon }) => (
+								<li key={label}>
+									<a href={href} target="_blank" rel="noreferrer" className="channel">
+										<span className="channelIcon" aria-hidden="true">
+											<Icon />
+										</span>
+										<span className="channelText">
+											<strong>{label}</strong>
+											<small>{detail}</small>
+										</span>
+										<LuArrowUpRight className="channelArrow" aria-hidden="true" />
+										<span className="visuallyHidden"> (opens in a new tab)</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<footer className="siteFooter">
+				<div className="container footerInner">
+					<p>
+						© {year} {profile.name} · <span className="footerBrand">{profile.brand}</span>
+					</p>
+					<p className="footerNote">{profile.tagline}.</p>
+				</div>
+			</footer>
+		</>
 	);
 };
 

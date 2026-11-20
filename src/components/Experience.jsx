@@ -1,147 +1,156 @@
-import React from "react";
-import { BsArrowUpCircleFill } from "react-icons/bs";
-import { MdReadMore } from "react-icons/md";
+import React, { useRef, useState } from "react";
+import { LuChevronDown } from "react-icons/lu";
+import { experience } from "../data/content";
+import useReveal from "../hooks/useReveal";
 
+/*
+ * Interactive timeline built on the disclosure pattern: each role header is a
+ * real <button aria-expanded>. Up/Down/Home/End move between roles. The rail
+ * "fills" up to the role you last opened. Everything also works by tab/enter.
+ */
 const Experience = () => {
+	const ref = useReveal({ threshold: 0.1 });
+	const [open, setOpen] = useState(() => new Set([experience[0].id]));
+	const [activeIndex, setActiveIndex] = useState(0);
+	const buttonsRef = useRef([]);
+
+	const allOpen = open.size === experience.length;
+
+	const toggle = (id, index) => {
+		setOpen((prev) => {
+			const next = new Set(prev);
+			if (next.has(id)) next.delete(id);
+			else next.add(id);
+			return next;
+		});
+		setActiveIndex(index);
+	};
+
+	const toggleAll = () => {
+		setOpen(allOpen ? new Set() : new Set(experience.map((job) => job.id)));
+		setActiveIndex(allOpen ? 0 : experience.length - 1);
+	};
+
+	const onKeyDown = (event, index) => {
+		const last = experience.length - 1;
+		const target = {
+			ArrowDown: Math.min(index + 1, last),
+			ArrowUp: Math.max(index - 1, 0),
+			Home: 0,
+			End: last,
+		}[event.key];
+		if (target === undefined) return;
+		event.preventDefault();
+		buttonsRef.current[target]?.focus();
+	};
+
 	return (
-		<section id="experience" className="sectionContainer expSection">
-			<div className="w90">
-				<div id="headingContainer">
-					<h1 className="heading" id="experiencePrompt">
-						Business <span className="keyword">Experience</span>
-					</h1>
-				</div>
+		<section
+			id="experience"
+			className="section experience"
+			aria-labelledby="experience-title"
+			ref={ref}
+		>
+			{/* Decorative background texture */}
+			<span className="expBg" aria-hidden="true" />
 
-				<div id="timeline">
-					<a href="#experience" id="">
-						<BsArrowUpCircleFill id="timelineEnd" />
-					</a>
-				</div>
-
-				<div className="timelineRow rowLeft">
-					<section>
-						<div className="timelineMark">
-							<div className="centerMark"></div>
-						</div>
-						<div className="expTop">
-							<div className="companyAndRole">
-								<p className="timelineTitle">Simpala</p>
-								<p className="jobRole">Salesforce Technical Consultant</p>
-							</div>
-							<img
-								className="companyLogo"
-								src={require("../images/Simpala-Logo.jpeg")}
-								alt="Simpala Logo"
-							/>
-						</div>
-						<p className="expDes">
-							Specializing in marketing automation, lead nurturing, and campaign
-							optimization using Salesforce Marketing Cloud and Account
-							Engagement (Pardot) by Salesforce. Built targeted campaigns
-							leveraging Email Studio, Journey Builder, Automation Studio, and
-							Content Builder, while developing AMPscript-based dynamic
-							personalization to enhance customer journeys. Managed Salesforce
-							Core administration, including user management, data integrity,
-							and process automation, and created dashboards and reports to
-							deliver actionable business insights. Additionally, customized
-							Salesforce instances using Apex and Lightning Web Components (LWC)
-							to meet unique client requirements and enhance overall platform
-							functionality.
+			<div className="container">
+				<div className="expHeader">
+					<div className="sectionHeader">
+						<p className="eyebrow">experience.log</p>
+						<h2 id="experience-title" className="sectionTitle">
+							Where I’ve worked
+						</h2>
+						<p className="sectionLead">
+							Four roles across CRM and marketing technology, from Adobe Campaign
+							to Salesforce. Open a role to see what I delivered.
 						</p>
-						<div className="expBottom"></div>
-					</section>
+					</div>
+					<button type="button" className="btn btnGhost expToggleAll" onClick={toggleAll}>
+						{allOpen ? "Collapse all" : "Expand all"}
+					</button>
 				</div>
 
-				<div className="timelineRow rowRight">
-					<section>
-						<div className="timelineMark">
-							<div className="centerMark"></div>
-						</div>
-						<div className="expTop">
-							<div className="companyAndRole">
-								<p className="timelineTitle">Marcloud Consulting</p>
-								<p className="jobRole">Account Engagement Consultant</p>
-							</div>
-							<img
-								className="companyLogo"
-								src={require("../images/Marcloud-Logo.jpeg")}
-								alt="Marcloud Logo"
-							/>
-						</div>
-						<p className="expDes">
-							Built and managed Engagement Studio programs to drive prospect
-							engagement through personalized, multi-touch journeys. Created
-							dynamic email templates and landing pages using HTML, CSS, and
-							JavaScript to ensure alignment with brand guidelines and campaign
-							objectives. Developed automation rules, completion actions, and
-							segmentation lists to streamline lead qualification and assignment
-							processes. Integrated Account Engagement with Salesforce Core to
-							enable accurate lead tracking, seamless data flow, and actionable
-							reporting that empowered sales teams to respond effectively.
-						</p>
-						<div className="expBottom"></div>
-					</section>
-				</div>
+				<ol className="timeline">
+					{experience.map((job, index) => {
+						const isOpen = open.has(job.id);
+						const state =
+							index < activeIndex ? " isPast" : index === activeIndex ? " isActive" : "";
+						const panelId = `role-${job.id}`;
+						const headerId = `role-${job.id}-header`;
 
-				<div className="timelineRow rowLeft">
-					<section>
-						<div className="timelineMark">
-							<div className="centerMark"></div>
-						</div>
-						<div className="expTop">
-							<div className="companyAndRole">
-								<p className="timelineTitle">RICS </p>
-								<p className="jobRole">CRM Technical Specialist</p>
-							</div>
-							<img
-								className="companyLogo"
-								src={require("../images/RICS-LOGO.png")}
-								alt="RICS Logo"
-							/>
-						</div>
-						<p className="expDes">
-							Automated marketing communications using Adobe Campaign Standard
-							by Adobe, improving operational efficiency across business units.
-							Created custom HTML email templates and managed the communications
-							calendar through Monday.com to ensure streamlined planning and
-							execution. Provided strategic email marketing best practices to
-							maintain brand consistency and maximize audience engagement across
-							campaigns.
-						</p>
-						<div className="expBottom"></div>
-					</section>
-				</div>
+						return (
+							<li
+								key={job.id}
+								className={`timelineItem reveal${state}${isOpen ? " isOpen" : ""}${
+									isOpen && index === activeIndex ? " isSelected" : ""
+								}`}
+								style={{ "--i": index }}
+							>
+								<div className="timelineRail" aria-hidden="true">
+									<span className="timelineNode" />
+								</div>
 
-				<div className="timelineRow rowRight">
-					<section>
-						<div className="timelineMark">
-							<div className="centerMark"></div>
-						</div>
-						<div className="expTop">
-							<div className="companyAndRole">
-								<p className="timelineTitle">Boots UK</p>
-								<p className="jobRole">Adobe Campaign Specialist</p>
-							</div>
-							<img
-								className="companyLogo"
-								src={require("../images/Boots-UK-Logo.png")}
-								alt="Boots UK Logo"
-							/>
-						</div>
-						<p className="expDes">
-							Managed delivery of marketing communications across multiple
-							channels to ensure consistent messaging and timely execution.
-							Developed email templates in Adobe Campaign Classic and Adobe
-							Experience Manager using HTML, CSS, and JavaScript through Adobe,
-							supporting scalable and brand-aligned digital campaigns.
-							Integrated Movable Ink to enhance email personalization with
-							dynamic content capabilities, and managed mobile app customer
-							communications via Airship to deliver targeted, real-time
-							messaging experiences.
-						</p>
-						<div className="expBottom"></div>
-					</section>
-				</div>
+								<article className="timelineCard">
+									<h3 className="timelineHeading">
+										<button
+											ref={(node) => {
+												buttonsRef.current[index] = node;
+											}}
+											id={headerId}
+											type="button"
+											className="timelineButton"
+											aria-expanded={isOpen}
+											aria-controls={panelId}
+											onClick={() => toggle(job.id, index)}
+											onKeyDown={(event) => onKeyDown(event, index)}
+										>
+											<img
+												className="companyLogo"
+												src={job.logo}
+												alt=""
+												width="48"
+												height="48"
+												loading="lazy"
+											/>
+											<span className="timelineMeta">
+												<span className="timelineRole">
+													{job.role}
+													<span className="visuallyHidden"> at </span>
+												</span>
+												<span className="timelineCompany">{job.company}</span>
+											</span>
+											<span className="timelineIndex" aria-hidden="true">
+												{String(index + 1).padStart(2, "0")}
+											</span>
+											<LuChevronDown className="timelineChevron" aria-hidden="true" />
+										</button>
+									</h3>
+
+									<p className="timelineSummary">{job.summary}</p>
+
+									<div
+										id={panelId}
+										role="region"
+										aria-labelledby={headerId}
+										className="timelinePanel"
+									>
+										<div className="timelinePanelInner">
+											<p className="timelineDescription">{job.description}</p>
+											<ul className="chipList" aria-label="Tools used">
+												{job.tools.map((tool) => (
+													<li key={tool} className="chip chipOnCard">
+														{tool}
+													</li>
+												))}
+											</ul>
+										</div>
+									</div>
+								</article>
+							</li>
+						);
+					})}
+				</ol>
 			</div>
 		</section>
 	);

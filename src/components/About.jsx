@@ -1,127 +1,54 @@
 import React from "react";
-import {
-	SiJavascript,
-	SiCss3,
-	SiHtml5,
-	SiReact,
-	SiMysql,
-	SiPhp,
-	SiGmail,
-	SiGithub,
-	SiLinkedin,
-	SiSalesforce,
-} from "react-icons/si";
+import { about } from "../data/content";
+import useReveal from "../hooks/useReveal";
 
 const About = () => {
+	const ref = useReveal();
+
 	return (
-		<>
-			<section className="sectionContainer" id="intro">
-				<div className="introWrapper">
-					<div className="introLeft">
-						<div className="bannerShape"></div>
-						<div className="centreIntro">
-							<h1 id="name">VEECODESFORCE</h1>
-							<h2 id="title">
-								Automation <b>Engineered Right</b>
-							</h2>
-							{/* <i className='bannerIcon'>
-                                <SiLinkedin />
-                            </i> */}
-							<div className="bannerIcons">
-								<a
-									href="https://github.com/vivyankonjera?tab=repositories"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<i className="bannerIcon">
-										<SiGithub />
-									</i>
-								</a>
-								<a
-									href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<i className="bannerIcon">
-										<SiLinkedin />
-									</i>
-								</a>
-								<a
-									href="https://www.salesforce.com/trailblazer/sb7kb73xxtqfenwrfn"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<i className="bannerIcon">
-										<SiSalesforce />
-									</i>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div className="introRight">
-						<div className="bannerShapeRight"></div>
-					</div>
-				</div>
-
-				<div class="aboutBg">
-					<div class="aboutC w90">
-						<div class="certificationsContainer">
-							<img
-								src={require("../images/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png")}
-								alt=""
-								className="certIcon"
-							/>
-							<img
-								src={require("../images/2023-07_Badge_SF-Certified_MC-AE-Specialist_High-Res.png")}
-								alt=""
-								className="certIcon"
-							/>
-							<img
-								src={require("../images/2023-07_Badge_SF-Certified_AI-Associate_High-Res.png")}
-								alt=""
-								className="certIcon"
-							/>
-						</div>
-						<div class="aboutTextContainer">
-							<h1 class="heading aboutText">
-								A brief <span class="keyword">introduction</span>
-							</h1>
-							<p class="aboutText">
-								I’m a Salesforce certified technical consultant helping
-								businesses implement and optimize Salesforce and Marketing Cloud
-								to drive scalable sales and marketing operations. With over
-								three years of hands-on experience, I deliver robust CRM and
-								marketing automation solutions built around clean data,
-								efficient processes, and clear business requirements. My
-								experience includes end to end Salesforce delivery, including
-								data modeling, integrations, audience segmentation, campaign
-								automation, and reporting across Salesforce Core, Marketing
-								Cloud, and Account Engagement. I work across both solution
-								design and build to ensure implementations are maintainable,
-								performant, and ready to scale. I also bring strong development
-								capability in Apex, Lightning Web Components, and SOQL and SQL,
-								allowing me to extend Salesforce where standard functionality
-								falls short.
+		<section id="about" className="section about" aria-labelledby="about-title" ref={ref}>
+			<div className="container">
+				<div className="aboutGrid">
+					<div className="aboutCopy reveal">
+						<p className="eyebrow">about.me</p>
+						<h2 id="about-title" className="sectionTitle">
+							Clean data, efficient processes, <span className="gradientText">built to scale.</span>
+						</h2>
+						{about.paragraphs.map((text) => (
+							<p key={text.slice(0, 24)} className="aboutText">
+								{text}
 							</p>
-							<div id="aboutBtns">
-								<a href="#experience">
-									<button className="aboutBtn">Learn more</button>
-								</a>
-								<div id="btnSeperator"></div>
-								<a
-									href="https://linkedin.com/in/vivya-nkonjera-114a712bb"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<button class="aboutBtn">Get in touch</button>
-								</a>
-							</div>
-						</div>
+						))}
 					</div>
+
+					<aside className="aboutSide" aria-label="At a glance">
+						<ul className="statGrid">
+							{about.stats.map((stat, index) => (
+								<li key={stat.label} className="statCard reveal" style={{ "--i": index + 1 }}>
+									<span className="statValue">{stat.value}</span>
+									<span className="statLabel">{stat.label}</span>
+								</li>
+							))}
+						</ul>
+
+						<div className="certCard reveal" style={{ "--i": 4 }}>
+							<h3 className="miniTitle">Certifications</h3>
+							<ul className="certList">
+								{about.certifications.map((cert) => (
+									<li key={cert.name} className="certItem">
+										<img src={cert.image} alt="" width="56" height="56" loading="lazy" />
+										<span>
+											<strong>{cert.name}</strong>
+											<small>Salesforce credential</small>
+										</span>
+									</li>
+								))}
+							</ul>
+						</div>
+					</aside>
 				</div>
-			</section>
-		</>
+			</div>
+		</section>
 	);
 };
 
