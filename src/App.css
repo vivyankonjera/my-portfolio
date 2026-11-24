@@ -334,18 +334,108 @@ main:focus {
 }
 
 .navBar {
+	--notch-x: -200px;
+	--bubble: 44px;
+	position: relative;
+	isolation: isolate;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 16px;
 	height: 60px;
 	padding: 0 8px 0 20px;
+}
+
+/* Bar background lives on its own layer so the notch mask (and the shadow,
+   which follows the masked shape via drop-shadow) never clips the links. */
+.navBg {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	/* Soft shadow + crisp 1px edge, both following the notch so it reads on white */
+	filter: drop-shadow(0 6px 14px rgba(31, 38, 80, 0.12)) drop-shadow(0 1px 1px rgba(31, 38, 80, 0.1));
+	pointer-events: none;
+}
+
+.navBgFill {
+	position: absolute;
+	inset: 0;
 	border-radius: var(--radius-pill);
-	background: rgba(255, 255, 255, 0.78);
-	backdrop-filter: saturate(1.4) blur(14px);
-	-webkit-backdrop-filter: saturate(1.4) blur(14px);
-	box-shadow: var(--shadow-sm);
-	border: 1px solid rgba(255, 255, 255, 0.9);
+	/* Navy bar so the notch reads clearly against the light page */
+	background: var(--color-tertiary);
+}
+
+/* Blue focus ring is too dark on the navy bar */
+.navBar :focus-visible {
+	outline-color: #ffffff;
+}
+
+/* Bubble that hangs below the bar under the active link (desktop only) */
+.navBubble {
+	position: absolute;
+	top: calc(100% - 12px);
+	left: 0;
+	z-index: 1;
+	display: none;
+	place-items: center;
+	width: var(--bubble);
+	height: var(--bubble);
+	border-radius: 50%;
+	background: #ff7ac6;
+	color: var(--color-tertiary);
+	font-size: 1.25rem;
+	box-shadow: 0 10px 22px -8px rgba(255, 122, 198, 0.7);
+	transform: translateX(calc(var(--notch-x) - var(--bubble) / 2));
+	pointer-events: none;
+}
+
+.navBubbleIcon {
+	animation: bubbleIcon var(--dur-slow) var(--ease-spring);
+}
+
+@keyframes bubbleIcon {
+	from {
+		opacity: 0;
+		transform: scale(0.4) rotate(-20deg);
+	}
+}
+
+@media (min-width: 901px) {
+	.navBar.hasNotch .navBubble {
+		display: grid;
+	}
+
+	/* Curved notch cut into the bar's bottom edge around the bubble.
+	   Notch: 27px radius (22px bubble + 5px gap), centre 10px below the bar,
+	   with smooth fillets where it meets the edge. Layer 1 (notch) is XORed
+	   out of layer 2 (solid). */
+	.navBar.hasNotch .navBgFill {
+		-webkit-mask-image:
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='40'%3E%3Cpath d='M14 40C24 40 29.9 39.3 35 33A27 27 0 0 1 77 33C82.1 39.3 88 40 98 40Z'/%3E%3C/svg%3E"),
+			linear-gradient(#000, #000);
+		mask-image:
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='40'%3E%3Cpath d='M14 40C24 40 29.9 39.3 35 33A27 27 0 0 1 77 33C82.1 39.3 88 40 98 40Z'/%3E%3C/svg%3E"),
+			linear-gradient(#000, #000);
+		-webkit-mask-size: 112px 40px, 100% 100%;
+		mask-size: 112px 40px, 100% 100%;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-position: calc(var(--notch-x) - 56px) 100%, 0 0;
+		mask-position: calc(var(--notch-x) - 56px) 100%, 0 0;
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+	}
+
+	/* Slide only after the first measurement (no fly-in on load) */
+	.navBar.isReady .navBubble {
+		transition: transform 520ms var(--ease-spring);
+	}
+
+	.navBar.isReady .navBgFill {
+		transition:
+			-webkit-mask-position 520ms var(--ease-spring),
+			mask-position 520ms var(--ease-spring);
+	}
 }
 
 .logo {
@@ -361,7 +451,11 @@ main:focus {
 }
 
 .logo span {
-	color: var(--color-secondary);
+	color: #ff7ac6;
+}
+
+.navBar .logo {
+	color: var(--color-on-dark);
 }
 
 .navLinks {
@@ -374,39 +468,39 @@ main:focus {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
+	gap: 6px;
 	min-height: 44px;
-	padding: 0 14px;
+	padding: 0 12px;
 	border-radius: var(--radius-pill);
-	color: var(--color-ink-2);
+	color: rgba(255, 255, 255, 0.72);
 	font-weight: 500;
 	text-decoration: none;
 	transition: color var(--dur-base) var(--ease-out);
 }
 
-.navLink::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	bottom: 6px;
-	width: 18px;
-	height: 3px;
-	border-radius: 3px;
-	background: var(--color-secondary);
-	transform: translateX(-50%) scaleX(0);
-	transition: transform var(--dur-base) var(--ease-spring);
+.navLinkIcon {
+	flex-shrink: 0;
+	font-size: 1rem;
+	transition:
+		opacity var(--dur-base) var(--ease-out),
+		transform var(--dur-base) var(--ease-out);
 }
 
 .navLink:hover {
-	color: var(--color-ink);
+	color: var(--color-on-dark);
 }
 
 .navLink[aria-current="true"] {
-	color: var(--color-secondary);
+	color: var(--color-on-dark);
 	font-weight: 600;
 }
 
-.navLink[aria-current="true"]::after {
-	transform: translateX(-50%) scaleX(1);
+/* Desktop: the active icon "drops" into the bubble below */
+@media (min-width: 901px) {
+	.navBar.hasNotch .navLink[aria-current="true"] .navLinkIcon {
+		opacity: 0;
+		transform: translateY(10px) scale(0.6);
+	}
 }
 
 .navActions {
@@ -420,6 +514,17 @@ main:focus {
 	padding: 0 20px;
 }
 
+/* White pill CTA on the navy bar */
+.navBar .navCta {
+	background: var(--color-card);
+	color: var(--color-tertiary);
+	box-shadow: none;
+}
+
+.navBar .navCta:hover {
+	background: #ffe3f3;
+}
+
 .menuToggle {
 	display: none;
 	width: 44px;
@@ -427,11 +532,11 @@ main:focus {
 	border-radius: 50%;
 	place-items: center;
 	font-size: 1.375rem;
-	color: var(--color-ink);
+	color: var(--color-on-dark);
 }
 
 .menuToggle:hover {
-	background: var(--color-bg);
+	background: rgba(255, 255, 255, 0.12);
 }
 
 /* ------------------------------------------------------------------
@@ -525,13 +630,29 @@ main:focus {
 		transform: none;
 	}
 
+	/* Dropdown panel is light, so links go back to dark text + blue focus */
 	.navLink {
+		gap: 10px;
 		min-height: 48px;
 		padding: 0 16px;
 		border-radius: var(--radius-sm);
+		color: var(--color-ink-2);
+	}
+
+	.navLink:hover {
+		color: var(--color-ink);
+	}
+
+	.navBar .navLinks :focus-visible {
+		outline-color: var(--color-blue);
 	}
 
 	.navLink::after {
+		content: "";
+		position: absolute;
+		border-radius: 3px;
+		background: var(--color-secondary);
+		transition: transform var(--dur-base) var(--ease-spring);
 		left: 6px;
 		bottom: 50%;
 		width: 3px;
@@ -541,6 +662,7 @@ main:focus {
 
 	.navLink[aria-current="true"] {
 		background: #fbeef6;
+		color: var(--color-secondary);
 	}
 
 	.navLink[aria-current="true"]::after {

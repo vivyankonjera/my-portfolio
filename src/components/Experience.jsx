@@ -10,8 +10,9 @@ import useReveal from "../hooks/useReveal";
  */
 const Experience = () => {
 	const ref = useReveal({ threshold: 0.1 });
-	const [open, setOpen] = useState(() => new Set([experience[0].id]));
-	const [activeIndex, setActiveIndex] = useState(0);
+	// All roles start collapsed; nothing is highlighted until one is opened.
+	const [open, setOpen] = useState(() => new Set());
+	const [activeIndex, setActiveIndex] = useState(-1);
 	const buttonsRef = useRef([]);
 
 	const allOpen = open.size === experience.length;
@@ -28,7 +29,7 @@ const Experience = () => {
 
 	const toggleAll = () => {
 		setOpen(allOpen ? new Set() : new Set(experience.map((job) => job.id)));
-		setActiveIndex(allOpen ? 0 : experience.length - 1);
+		setActiveIndex(allOpen ? -1 : experience.length - 1);
 	};
 
 	const onKeyDown = (event, index) => {
@@ -62,8 +63,9 @@ const Experience = () => {
 							Where I’ve worked
 						</h2>
 						<p className="sectionLead">
-							Four roles across CRM and marketing technology, from Adobe Campaign
-							to Salesforce. Open a role to see what I delivered.
+							From hand-coding HTML, CSS and JavaScript templates to building Apex
+							and Lightning Web Component customisations in Salesforce. Open a role
+							to see what I delivered.
 						</p>
 					</div>
 					<button type="button" className="btn btnGhost expToggleAll" onClick={toggleAll}>

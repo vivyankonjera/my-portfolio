@@ -99,8 +99,12 @@ const ProjectCard = ({ project, index, onOpen }) => {
 					/>
 				</div>
 
+				{/* Visual CTA only: the stretched title button handles the click */}
 				<span className="projectOpen" aria-hidden="true">
-					View details <LuArrowUpRight />
+					View details
+					<span className="projectOpenIcon">
+						<LuArrowUpRight />
+					</span>
 				</span>
 			</article>
 		</li>
@@ -248,13 +252,14 @@ const Projects = () => {
 						Things I’ve built
 					</h2>
 					<p className="sectionLead">
-						Coding projects from my development work. Select a card to see the
-						details, stack and source code.
+						Full-stack apps built with JavaScript (React), PHP (Laravel) and SQL.
+						Select a card for the details, stack and source code.
 					</p>
 				</div>
 
 				<ul className="projectGrid">
-					{projects.map((project, index) => (
+					{/* Placeholder cards are hidden until there's a real case study */}
+					{projects.filter((project) => !project.placeholder).map((project, index) => (
 						<ProjectCard key={project.id} project={project} index={index} onOpen={open} />
 					))}
 				</ul>

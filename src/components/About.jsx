@@ -12,7 +12,7 @@ const About = () => {
 					<div className="aboutCopy reveal">
 						<p className="eyebrow">about.me</p>
 						<h2 id="about-title" className="sectionTitle">
-							Clean data, efficient processes, <span className="gradientText">built to scale.</span>
+							Code that extends Salesforce, <span className="gradientText">built to scale.</span>
 						</h2>
 						{about.paragraphs.map((text) => (
 							<p key={text.slice(0, 24)} className="aboutText">
@@ -25,7 +25,7 @@ const About = () => {
 						<ul className="statGrid">
 							{about.stats.map((stat, index) => (
 								<li key={stat.label} className="statCard reveal" style={{ "--i": index + 1 }}>
-									<span className="statValue">{stat.value}</span>
+									<span className={`statValue${stat.isText ? " statValueText" : ""}`}>{stat.value}</span>
 									<span className="statLabel">{stat.label}</span>
 								</li>
 							))}

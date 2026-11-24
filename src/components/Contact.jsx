@@ -42,8 +42,8 @@ const Contact = () => {
 								Keep in touch
 							</h2>
 							<p className="contactLead">
-								This doesn’t have to be the end. Whether it’s a role, a project or a
-								question about Salesforce, please don’t hesitate to reach out.
+								Whether it’s a Salesforce development role, a project or a question
+								about Apex and LWC, please don’t hesitate to reach out.
 							</p>
 
 							<div className="contactActions">
