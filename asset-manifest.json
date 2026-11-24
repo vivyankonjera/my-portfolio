@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3ba9031.css",
-    "main.js": "/static/js/main.ca8bfa7b.js",
+    "main.css": "/static/css/main.09d1db5d.css",
+    "main.js": "/static/js/main.61a0b4a7.js",
     "static/js/453.15a626a8.chunk.js": "/static/js/453.15a626a8.chunk.js",
     "static/media/ticketly.png": "/static/media/ticketly.d9f9d1d9b1829feeecfa.png",
     "static/media/headshot-hero.jpg": "/static/media/headshot-hero.ee8de6f22ebe49f591ad.jpg",
@@ -11,12 +11,12 @@
     "static/media/fdeskmob.png": "/static/media/fdeskmob.003d5470a46b372b39d3.png",
     "static/media/Boots-UK-Logo.png": "/static/media/Boots-UK-Logo.339d64081c4f2dc925fa.png",
     "index.html": "/index.html",
-    "main.c3ba9031.css.map": "/static/css/main.c3ba9031.css.map",
-    "main.ca8bfa7b.js.map": "/static/js/main.ca8bfa7b.js.map",
+    "main.09d1db5d.css.map": "/static/css/main.09d1db5d.css.map",
+    "main.61a0b4a7.js.map": "/static/js/main.61a0b4a7.js.map",
     "453.15a626a8.chunk.js.map": "/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3ba9031.css",
-    "static/js/main.ca8bfa7b.js"
+    "static/css/main.09d1db5d.css",
+    "static/js/main.61a0b4a7.js"
   ]
 }
