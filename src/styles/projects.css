@@ -5,9 +5,12 @@
 	position: relative;
 }
 
+/* Cards keep a comfortable width and centre as a group, so any number of
+   projects (currently 2) lays out without empty columns. */
 .projectGrid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 400px));
+	justify-content: center;
 	gap: clamp(16px, 2.4vw, 28px);
 	align-items: stretch;
 }
@@ -144,9 +147,10 @@
 }
 
 /* Media with stacked "tab" layers peeking above the screenshot */
+/* Screenshot sits inside the card padding (no longer edge to edge) */
 .projectMedia {
 	position: relative;
-	margin: auto -24px 0;
+	margin-top: auto;
 	padding-top: 44px;
 }
 
@@ -178,7 +182,11 @@
 	aspect-ratio: 16 / 10;
 	object-fit: cover;
 	object-position: left top;
-	border-radius: 22px 22px 0 0;
+	/* Rounded all round with a 2px light frame (padding shows the background) */
+	padding: 2px;
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.28);
+	box-shadow: 0 16px 30px -18px rgba(0, 0, 0, 0.6);
 	transform-origin: bottom center;
 	transition: transform var(--dur-slow) var(--ease-spring);
 }
@@ -198,29 +206,52 @@
 	transform: translateY(-4px) scale(1.02);
 }
 
+/* "View details": solid white pill in a footer strip below the screenshot,
+   on the card's own dark colour, so it has strong contrast on every theme
+   and lines up across cards. */
 .projectOpen {
-	position: absolute;
-	right: 16px;
-	bottom: 16px;
+	position: relative;
 	z-index: 2;
+	align-self: flex-start;
 	display: inline-flex;
 	align-items: center;
-	gap: 6px;
-	min-height: 40px;
-	padding: 0 16px;
+	gap: 10px;
+	min-height: 44px;
+	margin: 20px 0 22px;
+	padding: 0 6px 0 18px;
 	border-radius: var(--radius-pill);
-	background: rgba(255, 255, 255, 0.95);
-	color: var(--color-ink);
+	background: var(--color-card);
+	color: var(--color-tertiary);
 	font-family: var(--font-display);
 	font-size: 0.9375rem;
-	font-weight: 600;
-	box-shadow: var(--shadow-md);
+	font-weight: 700;
+	box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.55);
+	transition:
+		background-color var(--dur-base) var(--ease-out),
+		box-shadow var(--dur-base) var(--ease-out);
+}
+
+.projectOpenIcon {
+	display: grid;
+	place-items: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: var(--color-tertiary);
+	color: #ffffff;
+	font-size: 1rem;
 	transition: transform var(--dur-base) var(--ease-spring);
 }
 
 .projectCard:hover .projectOpen,
 .projectCard:focus-within .projectOpen {
-	transform: translateY(-3px);
+	background: #ffe3f3;
+	box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.65);
+}
+
+.projectCard:hover .projectOpenIcon,
+.projectCard:focus-within .projectOpenIcon {
+	transform: translate(2px, -2px) rotate(45deg);
 }
 
 /* Placeholder card */
@@ -398,17 +429,7 @@ html.dialogOpen {
 /* ==================================================================
    Responsive
    ================================================================== */
-@media (max-width: 1024px) {
-	.projectGrid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
-
 @media (max-width: 640px) {
-	.projectGrid {
-		grid-template-columns: 1fr;
-	}
-
 	.projectCard {
 		min-height: 0;
 	}

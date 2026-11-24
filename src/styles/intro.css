@@ -488,6 +488,12 @@
 	font-variant-numeric: tabular-nums;
 }
 
+/* Text-based stat (e.g. the stack) needs a smaller size than the numbers */
+.statValueText {
+	font-size: clamp(1rem, 1.6vw, 1.125rem);
+	line-height: 1.3;
+}
+
 .statLabel {
 	font-size: 0.875rem;
 	line-height: 1.35;
@@ -567,19 +573,22 @@
 	.heroFrame {
 		grid-template-columns: 1fr;
 		min-height: 0;
-		padding-top: 40px;
+		padding-top: 24px;
+	}
+
+	/* Mobile: headshot (with orbits + badge) first, then the intro text */
+	.heroVisual {
+		order: -1;
+		flex-direction: column;
+		align-items: center;
+		gap: 56px;
+		min-height: 0;
+		/* room for the outer orbit, which extends 42px beyond the portrait */
+		padding: 52px 0 0;
 	}
 
 	.heroCopy {
-		padding-bottom: 8px;
-	}
-
-	.heroVisual {
-		flex-direction: column;
-		align-items: center;
-		gap: 64px;
-		min-height: 0;
-		padding-top: 64px;
+		padding: 28px 0 40px;
 	}
 
 	.heroPortraitWrap {
@@ -594,11 +603,10 @@
 		inset: -42px;
 	}
 
-	/* Badge stops floating and sits centred under the portrait */
+	/* Badge stops floating and sits under the portrait, right-aligned */
 	.heroBadge {
 		position: static;
 		align-self: flex-end;
-		margin-bottom: 24px;
 	}
 
 	.js-motion .heroBadge {

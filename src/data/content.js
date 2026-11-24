@@ -14,10 +14,11 @@ export const profile = {
 	// Name shown large in the hero (styled uppercase as "VEE")
 	displayName: "Vee",
 	brand: "VEECODESFORCE",
-	tagline: "Automation engineered right",
-	role: "Salesforce Technical Consultant",
+	tagline: "Salesforce, engineered right",
+	// How you describe yourself today (past job titles stay as they were in `experience`)
+	role: "Salesforce Developer",
 	summary:
-		"Salesforce certified technical consultant helping businesses implement and optimise Salesforce and Marketing Cloud to drive scalable sales and marketing operations.",
+		"Salesforce developer building on the platform with Apex, Lightning Web Components, JavaScript and SQL, backed by 3+ years delivering Salesforce and Marketing Cloud solutions.",
 	// PLACEHOLDER: add an email address to show a "copy email" / mailto option.
 	email: "",
 	// PLACEHOLDER: add your CV as /public/resume.pdf and set this to "/resume.pdf".
@@ -34,14 +35,14 @@ export const links = {
 
 export const about = {
 	paragraphs: [
-		"I’m a Salesforce certified technical consultant helping businesses implement and optimise Salesforce and Marketing Cloud to drive scalable sales and marketing operations. With over three years of hands-on experience, I deliver robust CRM and marketing automation solutions built around clean data, efficient processes, and clear business requirements.",
-		"My experience includes end-to-end Salesforce delivery, including data modelling, integrations, audience segmentation, campaign automation, and reporting across Salesforce Core, Marketing Cloud, and Account Engagement. I work across both solution design and build to ensure implementations are maintainable, performant, and ready to scale.",
-		"I also bring strong development capability in Apex, Lightning Web Components, and SOQL and SQL, allowing me to extend Salesforce where standard functionality falls short.",
+		"I’m a Salesforce developer with over three years of hands-on experience. I build with Apex, Lightning Web Components and SOQL/SQL to extend Salesforce where standard functionality falls short, and I’m comfortable across the stack, from JavaScript and HTML/CSS through to data.",
+		"My work spans end-to-end delivery: data modelling, integrations, automation and reporting on Salesforce Core, alongside Marketing Cloud and Account Engagement. I work across solution design and build so implementations stay maintainable, performant and ready to scale.",
+		"Before Salesforce, I hand-coded HTML, CSS and JavaScript templates and landing pages for brands like Boots UK, and I’ve built full-stack apps with React, PHP and MySQL.",
 	],
 	stats: [
 		{ value: "3+", label: "years hands-on Salesforce delivery" },
 		{ value: "3", label: "Salesforce certifications" },
-		{ value: "4", label: "roles across CRM & marketing tech" },
+		{ value: "Apex · LWC · JS · SQL", label: "core development stack", isText: true },
 	],
 	skillGroups: [
 		{
@@ -100,16 +101,16 @@ export const experience = [
 		dates: "Nov 2024 – Nov 2025",
 		logo: require("../images/Simpala-Logo.jpeg"),
 		summary:
-			"Marketing automation, lead nurturing and campaign optimisation across Marketing Cloud, Account Engagement and Salesforce Core.",
+			"Apex and Lightning Web Component customisations, Salesforce Core administration and automation, plus Marketing Cloud and Account Engagement delivery.",
 		description:
-			"Specialising in marketing automation, lead nurturing, and campaign optimisation using Salesforce Marketing Cloud and Account Engagement (Pardot). Built targeted campaigns leveraging Email Studio, Journey Builder, Automation Studio, and Content Builder, while developing AMPscript-based dynamic personalisation to enhance customer journeys. Managed Salesforce Core administration, including user management, data integrity, and process automation, and created dashboards and reports to deliver actionable business insights. Customised Salesforce instances using Apex and Lightning Web Components (LWC) to meet unique client requirements.",
+			"Customised Salesforce instances using Apex and Lightning Web Components (LWC) to meet unique client requirements. Managed Salesforce Core administration, including user management, data integrity and process automation, and created dashboards and reports to deliver actionable business insights. Delivered marketing automation, lead nurturing and campaign optimisation across Marketing Cloud and Account Engagement (Pardot), building campaigns with Email Studio, Journey Builder, Automation Studio and Content Builder, and developing AMPscript-based dynamic personalisation.",
 		tools: [
-			"Marketing Cloud",
-			"Account Engagement",
-			"Journey Builder",
-			"AMPscript",
 			"Apex",
 			"LWC",
+			"Salesforce Core",
+			"Marketing Cloud",
+			"Account Engagement",
+			"AMPscript",
 		],
 	},
 	{
@@ -119,10 +120,10 @@ export const experience = [
 		dates: "May – Jul 2024",
 		logo: require("../images/Marcloud-Logo.jpeg"),
 		summary:
-			"Engagement Studio programs, dynamic templates and lead qualification automation integrated with Salesforce Core.",
+			"HTML, CSS and JavaScript templates and landing pages, plus Account Engagement automation integrated with Salesforce Core.",
 		description:
-			"Built and managed Engagement Studio programs to drive prospect engagement through personalised, multi-touch journeys. Created dynamic email templates and landing pages using HTML, CSS, and JavaScript aligned with brand guidelines and campaign objectives. Developed automation rules, completion actions, and segmentation lists to streamline lead qualification and assignment. Integrated Account Engagement with Salesforce Core to enable accurate lead tracking, seamless data flow, and actionable reporting for sales teams.",
-		tools: ["Account Engagement", "Engagement Studio", "HTML", "CSS", "JavaScript"],
+			"Built dynamic email templates and landing pages using HTML, CSS and JavaScript, aligned with brand guidelines and campaign objectives. Integrated Account Engagement with Salesforce Core to enable accurate lead tracking, seamless data flow and actionable reporting for sales teams. Developed automation rules, completion actions and segmentation lists to streamline lead qualification and assignment, and built Engagement Studio programs for personalised, multi-touch journeys.",
+		tools: ["HTML", "CSS", "JavaScript", "Account Engagement", "Engagement Studio"],
 	},
 	{
 		id: "rics",
@@ -131,10 +132,10 @@ export const experience = [
 		dates: "Oct 2022 – Mar 2024",
 		logo: require("../images/RICS-LOGO.png"),
 		summary:
-			"Automated marketing communications with Adobe Campaign Standard and owned the email template and calendar workflow.",
+			"Custom HTML email templates and automated communications in Adobe Campaign Standard.",
 		description:
-			"Automated marketing communications using Adobe Campaign Standard, improving operational efficiency across business units. Created custom HTML email templates and managed the communications calendar through Monday.com to ensure streamlined planning and execution. Provided email marketing best practice guidance to maintain brand consistency and maximise audience engagement across campaigns.",
-		tools: ["Adobe Campaign Standard", "HTML email", "Monday.com"],
+			"Created custom HTML email templates and automated marketing communications using Adobe Campaign Standard, improving operational efficiency across business units. Managed the communications calendar through Monday.com for streamlined planning and execution, and provided email best practice guidance to maintain brand consistency and audience engagement.",
+		tools: ["HTML email", "Adobe Campaign Standard", "Monday.com"],
 	},
 	{
 		id: "boots",
@@ -143,10 +144,13 @@ export const experience = [
 		dates: "Jan – Aug 2022",
 		logo: require("../images/Boots-UK-Logo.png"),
 		summary:
-			"Multi-channel campaign delivery, Adobe Campaign Classic templates, Movable Ink personalisation and Airship app messaging.",
+			"HTML, CSS and JavaScript templates in Adobe Campaign Classic and AEM, Movable Ink personalisation and Airship app messaging.",
 		description:
-			"Managed delivery of marketing communications across multiple channels to ensure consistent messaging and timely execution. Developed email templates in Adobe Campaign Classic and Adobe Experience Manager using HTML, CSS, and JavaScript, supporting scalable and brand-aligned digital campaigns. Integrated Movable Ink to enhance email personalisation with dynamic content, and managed mobile app customer communications via Airship to deliver targeted, real-time messaging.",
+			"Developed email templates in Adobe Campaign Classic and Adobe Experience Manager using HTML, CSS and JavaScript, supporting scalable, brand-aligned digital campaigns. Integrated Movable Ink to add dynamic, personalised content, managed mobile app communications via Airship for targeted, real-time messaging, and coordinated multi-channel delivery to keep messaging consistent and on time.",
 		tools: [
+			"HTML",
+			"CSS",
+			"JavaScript",
 			"Adobe Campaign Classic",
 			"Adobe Experience Manager",
 			"Movable Ink",

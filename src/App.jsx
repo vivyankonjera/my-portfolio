@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import LwcLab from "./components/LwcLab";
+// LwcLab (animated LWC test IDE) is hidden for now; re-add the import and
+// <LwcLab /> below Experience to bring it back.
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import TopButton from "./components/TopButton";
@@ -34,7 +35,6 @@ function App() {
 				<Hero />
 				<About />
 				<Experience />
-				<LwcLab />
 				<Projects />
 				<Contact />
 			</main>
